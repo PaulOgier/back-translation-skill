@@ -1,5 +1,7 @@
 # back-translation-skill
 
+[![skills.sh](https://skills.sh/b/PaulOgier/back-translation-skill)](https://skills.sh/PaulOgier/back-translation-skill)
+
 ![translate: no new facts](docs/social-preview.png)
 
 An agent skill (Claude Code and other SKILL.md hosts) for translating a finished English

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><rect width="1024" height="1024" rx="200" fill="#0b0f19"/>
+<path d="M250 230 L160 230 L160 794 L250 794" fill="none" stroke="#60a5fa" stroke-width="60" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M774 230 L864 230 L864 794 L774 794" fill="none" stroke="#34d399" stroke-width="60" stroke-linejoin="round" stroke-linecap="round"/>
+<g stroke-width="52" stroke-linecap="round">
+<line x1="270" y1="340" x2="450" y2="340" stroke="#60a5fa"/><line x1="270" y1="446" x2="420" y2="446" stroke="#60a5fa"/>
+<line x1="270" y1="552" x2="450" y2="552" stroke="#fbbf24"/><line x1="270" y1="658" x2="390" y2="658" stroke="#60a5fa"/>
+<line x1="574" y1="340" x2="754" y2="340" stroke="#34d399"/><line x1="604" y1="446" x2="754" y2="446" stroke="#34d399"/>
+<line x1="574" y1="552" x2="754" y2="552" stroke="#fbbf24"/><line x1="634" y1="658" x2="754" y2="658" stroke="#34d399"/>
+</g>
+<line x1="512" y1="304" x2="512" y2="692" stroke="#94a3b8" stroke-width="14" stroke-dasharray="28 24"/>
+</svg>
