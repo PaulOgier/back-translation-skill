@@ -1,0 +1,514 @@
+{
+ "lang": "pt",
+ "lang_tags": ["pt", "pt-BR", "pt-PT"],
+ "name": "Portuguese (Brazilian spelling)",
+ "word_boundaries": true,
+ "decimal": ",",
+ "group": [
+  ".",
+  " ",
+  " ",
+  " "
+ ],
+ "scale_words": {
+  "mil": 1000.0,
+  "milhão": 1000000.0,
+  "milhões": 1000000.0,
+  "bilhão": 1000000000.0,
+  "bilhões": 1000000000.0,
+  "trilhão": 1000000000000.0,
+  "trilhões": 1000000000000.0,
+  "quatrilhão": 1000000000000000.0,
+  "quatrilhões": 1000000000000000.0,
+  "quintilhão": 1e+18,
+  "quintilhões": 1e+18,
+  "sextilhão": 1e+21,
+  "sextilhões": 1e+21,
+  "centenas": 100.0,
+  "milhares": 1000.0
+ },
+ "unknown_scale": "(?<![\\w-])\\w+il(?:h|i)(?:ão|ões)(?![\\w-])",
+ "number_words": {
+  "zero": 0,
+  "dois": 2,
+  "duas": 2,
+  "três": 3,
+  "quatro": 4,
+  "cinco": 5,
+  "seis": 6,
+  "sete": 7,
+  "oito": 8,
+  "nove": 9,
+  "dez": 10,
+  "onze": 11,
+  "doze": 12,
+  "treze": 13,
+  "catorze": 14,
+  "quatorze": 14,
+  "quinze": 15,
+  "dezesseis": 16,
+  "dezessete": 17,
+  "dezoito": 18,
+  "dezenove": 19,
+  "vinte": 20,
+  "trinta": 30,
+  "quarenta": 40,
+  "cinquenta": 50,
+  "sessenta": 60,
+  "setenta": 70,
+  "oitenta": 80,
+  "noventa": 90,
+  "ambos": 2,
+  "ambas": 2,
+  "cem": 100,
+  "duzentos": 200,
+  "duzentas": 200,
+  "trezentos": 300,
+  "trezentas": 300,
+  "quatrocentos": 400,
+  "quatrocentas": 400,
+  "quinhentos": 500,
+  "quinhentas": 500,
+  "seiscentos": 600,
+  "seiscentas": 600,
+  "setecentos": 700,
+  "setecentas": 700,
+  "oitocentos": 800,
+  "oitocentas": 800,
+  "novecentos": 900,
+  "novecentas": 900
+ },
+ "tens": {
+  "vinte": 20,
+  "trinta": 30,
+  "quarenta": 40,
+  "cinquenta": 50,
+  "sessenta": 60,
+  "setenta": 70,
+  "oitenta": 80,
+  "noventa": 90
+ },
+ "compound_units": {
+  "um": 1,
+  "uma": 1,
+  "dois": 2,
+  "duas": 2,
+  "três": 3,
+  "quatro": 4,
+  "cinco": 5,
+  "seis": 6,
+  "sete": 7,
+  "oito": 8,
+  "nove": 9
+ },
+ "compound": [
+  "{t} e {u}"
+ ],
+ "units": {
+  "second": [
+   "segundo",
+   "segundos"
+  ],
+  "minute": [
+   "minuto",
+   "minutos",
+   "min"
+  ],
+  "hour": [
+   "hora",
+   "horas"
+  ],
+  "day": [
+   "dia",
+   "dias"
+  ],
+  "week": [
+   "semana",
+   "semanas"
+  ],
+  "month": [
+   "mês",
+   "meses"
+  ],
+  "year": [
+   "ano",
+   "anos"
+  ],
+  "character": [
+   "caractere",
+   "caracteres"
+  ],
+  "word": [
+   "palavra",
+   "palavras"
+  ],
+  "percent": [
+   "%",
+   "por cento"
+  ],
+  "millisecond": [
+   "milissegundo",
+   "milissegundos",
+   "ms"
+  ],
+  "decade": [
+   "década",
+   "décadas"
+  ],
+  "century": [
+   "século",
+   "séculos"
+  ],
+  "kilobyte": [
+   "KB",
+   "kB",
+   "kilobyte",
+   "kilobytes"
+  ],
+  "megabyte": [
+   "MB",
+   "megabyte",
+   "megabytes"
+  ],
+  "gigabyte": [
+   "GB",
+   "gigabyte",
+   "gigabytes"
+  ],
+  "terabyte": [
+   "TB",
+   "terabyte",
+   "terabytes"
+  ],
+  "bit": [
+   "bit",
+   "bits"
+  ],
+  "byte": [
+   "byte",
+   "bytes"
+  ]
+ },
+ "unit_gap": "\\s*(?:de\\s+)?(?:(?=[^\\s\\d.,;:!?]*[^\\W\\d_])[^\\s\\d.,;:!?]+\\s+){0,2}?",
+ "normative": [
+  {
+   "kind": null,
+   "bare": "must",
+   "negated": "need-not",
+   "forms": [
+    "ser exigido",
+    "ser exigida",
+    "ser exigidos",
+    "ser exigidas",
+    "ser obrigatório",
+    "ser obrigatória"
+   ]
+  },
+  {
+   "kind": null,
+   "bare": "should",
+   "negated": "should-not",
+   "forms": [
+    "ser recomendado",
+    "ser recomendada"
+   ]
+  },
+  {
+   "kind": "must-not",
+   "forms": [
+    "não deve",
+    "não devem",
+    "não deverá",
+    "não deverão",
+    "é proibido",
+    "é proibida",
+    "são proibidos",
+    "são proibidas"
+   ]
+  },
+  {
+   "kind": "should-not",
+   "forms": [
+    "não deveria",
+    "não deveriam",
+    "não recomendado",
+    "não é recomendado",
+    "não se recomenda"
+   ]
+  },
+  {
+   "kind": "may-not",
+   "forms": [
+    "não pode",
+    "não podem",
+    "não poderá",
+    "não poderão",
+    "não consegue",
+    "não conseguem",
+    "não conseguiu"
+   ]
+  },
+  {
+   "kind": "need-not",
+   "forms": [
+    "não precisa",
+    "não precisam",
+    "não tem que",
+    "não têm que",
+    "não tem de",
+    "não têm de",
+    "não é obrigatório",
+    "não é obrigatória",
+    "não é necessário"
+   ]
+  },
+  {
+   "kind": "must",
+   "negated": "must-not",
+   "forms": [
+    "deve",
+    "devem",
+    "deverá",
+    "deverão"
+   ]
+  },
+  {
+   "kind": "must",
+   "negated": "need-not",
+   "forms": [
+    "tem que",
+    "têm que",
+    "tem de",
+    "têm de",
+    "precisa",
+    "precisam",
+    "é preciso",
+    "é necessário",
+    "obrigatório",
+    "obrigatória",
+    "obrigatórios",
+    "obrigatórias",
+    "exigir",
+    "exige",
+    "exigem",
+    "exigido",
+    "exigida",
+    "exigidos",
+    "exigidas",
+    "exigindo",
+    "exigiu",
+    "exigiram",
+    "requer",
+    "requerem"
+   ]
+  },
+  {
+   "kind": "should",
+   "negated": "should-not",
+   "forms": [
+    "deveria",
+    "deveriam",
+    "recomenda",
+    "recomendam",
+    "recomenda-se",
+    "recomendado",
+    "recomendada",
+    "recomendados",
+    "recomendadas",
+    "recomendou",
+    "recomendamos",
+    "recomendaram"
+   ]
+  },
+  {
+   "kind": "may",
+   "negated": "may-not",
+   "forms": [
+    "pode",
+    "podem",
+    "poderá",
+    "poderão",
+    "poderia",
+    "poderiam",
+    "possa",
+    "possam",
+    "podemos",
+    "pôde",
+    "opcional",
+    "opcionais",
+    "consegue",
+    "conseguem",
+    "conseguiu",
+    "conseguiram"
+   ]
+  },
+  {
+   "kind": "must",
+   "forms": [
+    "deve-se",
+    "devemos",
+    "deveremos"
+   ],
+   "negated": "must-not"
+  },
+  {
+   "kind": "must",
+   "forms": [
+    "terá que",
+    "terão que",
+    "teremos que",
+    "terá de",
+    "terão de"
+   ],
+   "negated": "need-not"
+  },
+  {
+   "kind": "should",
+   "forms": [
+    "convém"
+   ],
+   "negated": "should-not"
+  },
+  {
+   "kind": "may",
+   "forms": [
+    "talvez",
+    "é possível",
+    "permitido",
+    "permitida",
+    "permitidos",
+    "permitidas"
+   ],
+   "negated": "may-not"
+  }
+ ],
+ "forbidden": [],
+ "months": [
+  "janeiro",
+  "fevereiro",
+  "março",
+  "abril",
+  "maio",
+  "junho",
+  "julho",
+  "agosto",
+  "setembro",
+  "outubro",
+  "novembro",
+  "dezembro"
+ ],
+ "date_patterns": [
+  "\\b(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})\\b",
+  "\\b(?P<d>\\d{1,2})º?\\s+de\\s+(?P<m>{months})\\s+de\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<d>\\d{1,2})/(?P<m>\\d{1,2})/(?P<y>\\d{4})\\b",
+  "\\b(?P<m>{months})\\s+de\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<d>\\d{1,2})º?\\s+de\\s+(?P<m>{months})\\b",
+  "\\b(?:em|desde|até|durante)\\s+(?P<m>{months})\\b"
+ ],
+ "min_length_ratio": 0.5,
+ "notes": "Scale words are Brazilian: bilhão is 10^9. In Portugal bilião means 10^12, so the unknown-scale rule blocks it. deve is must; should is always deveria, never deve. Negation is read within three words before and one after a modal: não exige is need-not, não se deve is must-not. um and uma are not number words (they are the article) except inside compounds. se is not a clause break: não se deve keeps its negation.",
+ "negators": [
+  "não",
+  "nunca",
+  "jamais",
+  "nem",
+  "ninguém",
+  "nenhum",
+  "nenhuma",
+  "nada",
+  "em hipótese alguma",
+  "de modo algum",
+  "de forma alguma",
+  "de jeito nenhum",
+  "sequer"
+ ],
+ "negation_window": [
+  3,
+  1
+ ],
+ "negation_skip": [
+  "não só",
+  "não apenas",
+  "não somente",
+  "nem só",
+  "não mais que",
+  "não menos que"
+ ],
+ "clause_breaks": [
+  "e",
+  "ou",
+  "mas",
+  "porém",
+  "que",
+  "porque",
+  "quando",
+  "enquanto"
+ ],
+ "comparators": {
+  "before": {
+   "min": [
+    "pelo menos",
+    "no mínimo",
+    "um mínimo de",
+    "mínimo de",
+    "mínimo",
+    "não menos que",
+    "não menos de",
+    "ao menos"
+   ],
+   "max": [
+    "no máximo",
+    "um máximo de",
+    "máximo de",
+    "máximo",
+    "até",
+    "não mais que",
+    "não mais de"
+   ],
+   "gt": [
+    "mais de",
+    "mais do que",
+    "acima de",
+    "superior a"
+   ],
+   "lt": [
+    "menos de",
+    "menos do que",
+    "abaixo de",
+    "inferior a"
+   ],
+   "before": [
+    "antes de",
+    "antes do",
+    "antes da"
+   ],
+   "after": [
+    "depois de",
+    "depois do",
+    "depois da",
+    "após"
+   ]
+  },
+  "after": {
+   "min": [
+    "ou mais",
+    "no mínimo",
+    "ou superior"
+   ],
+   "max": [
+    "ou menos",
+    "no máximo",
+    "ou inferior"
+   ]
+  }
+ },
+ "relative_words": [
+  "que",
+  "quem",
+  "cujo",
+  "cuja",
+  "cujos",
+  "cujas"
+ ],
+ "relative_window": 2
+}

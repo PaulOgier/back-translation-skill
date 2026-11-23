@@ -1,0 +1,1860 @@
+[
+ {
+  "name": "CONTROL pass: 254 days -> 254 dias",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 254 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "CONTROL block: 254 days -> 245 dias",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 245 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "CONTROL pass claim must",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Passwords must be 15 characters[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>As senhas devem ter 15 caracteres[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be 15 characters"
+  ],
+  "tr_claims": [
+   "As senhas devem ter 15 caracteres"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "CONTROL block claim must->may",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Passwords must be 15 characters[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>As senhas podem ter 15 caracteres[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be 15 characters"
+  ],
+  "tr_claims": [
+   "As senhas podem ter 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP unit: adjective between number and unit",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 254 longos anos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit: unlisted unit centuries->decades",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 3 centuries</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 3 décadas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit: days -> séculos (unlisted target unit)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 254 séculos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit: rate per second -> por hora",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>340.1 billion guesses per second</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>340,1 bilhões de tentativas por hora</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit: a second -> por dia (real claim 11 wording)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>340.1 billion guesses a second</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>340,1 bilhões de tentativas por dia</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit zh: 254 days -> 254个小时",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>需要254个小时</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit de: 254 days -> 254 lange Jahre",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>dauert 254 lange Jahre</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit: 5 MB -> 5 GB",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>a 5 MB file</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>um arquivo de 5 GB</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP unit: 8 characters -> 8 dígitos",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>8 characters</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>8 dígitos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP scale: a million -> um bilhão",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>a million guesses</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>um bilhão de tentativas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP scale: one billion -> um trilhão",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>one billion years</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>um trilhão de anos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP scale: millions of -> bilhões de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>millions of accounts</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>bilhões de contas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP scale: billions of years -> milhares de anos (real meta description wording)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>can take billions of years</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>pode levar milhares de anos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP word: one day -> um ano",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes one day</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva um ano</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "FP word: an hour -> uma semana",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes an hour</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva uma semana</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "FP word: three hundred -> três",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>three hundred accounts</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>três contas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP word: half -> o dobro",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>half the time</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>o dobro do tempo</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "FP word: first -> terceiro",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>the first breach</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>o terceiro vazamento</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "FP hyphen de: two-factor -> Drei-Faktor",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>use two-factor authentication</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>nutzen Sie Drei-Faktor-Authentifizierung</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP compound de: eight-character -> sechsstelliges",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>an eight-character password</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>ein sechsstelliges Passwort</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP version: Python 3.10 -> 3.1",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>needs Python 3.10</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>requer o Python 3.1</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP leading zero: PIN 0042 -> 42",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>the PIN 0042</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>o PIN 42</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP comparator: at least 8 -> no máximo 8",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>at least 8 characters</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>no máximo 8 caracteres</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP comparator: more than 254 days -> menos de 254 dias",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>more than 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>menos de 254 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP comparator: before 2021 -> depois de 2021 (real claim 25 wording)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>Tenants created before 2021</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Os locatários criados depois de 2021</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP direction: divide by ten -> multiplicam por dez (real page wording)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>Ten cards divide every time by ten.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Dez placas multiplicam todos os tempos por dez.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "FP fraction: 8½ -> 8¼",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>8½ hours</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>8¼ horas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP en space-grouped: 10 000 -> 10 00",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>10 000 passwords</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>10 00 senhas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP zh: 9 thousand -> 9千克?",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>9 thousand</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>9千</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FP pt: requires -> não exige",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>NIST requires a blocklist[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>O NIST não exige uma lista de bloqueio[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST requires a blocklist"
+  ],
+  "tr_claims": [
+   "O NIST não exige uma lista de bloqueio"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: recommends -> não recomenda",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>NIST recommends a blocklist[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>O NIST não recomenda uma lista de bloqueio[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST recommends a blocklist"
+  ],
+  "tr_claims": [
+   "O NIST não recomenda uma lista de bloqueio"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: does not require -> exige",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>NIST does not require complexity rules[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>O NIST exige regras de complexidade[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST does not require complexity rules"
+  ],
+  "tr_claims": [
+   "O NIST exige regras de complexidade"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: must -> não é preciso",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>You must change the password[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Não é preciso trocar a senha[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "You must change the password"
+  ],
+  "tr_claims": [
+   "Não é preciso trocar a senha"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: must -> jamais devem",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Passwords must be changed yearly[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>As senhas jamais devem ser trocadas anualmente[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be changed yearly"
+  ],
+  "tr_claims": [
+   "As senhas jamais devem ser trocadas anualmente"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: must -> não se deve",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Passwords must be written down[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Não se deve anotar as senhas[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be written down"
+  ],
+  "tr_claims": [
+   "Não se deve anotar as senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: can -> não se pode",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>The list can be disabled[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Não se pode desativar a lista[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The list can be disabled"
+  ],
+  "tr_claims": [
+   "Não se pode desativar a lista"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: is mandatory -> não é obrigatória",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>MFA is mandatory for admins[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>A MFA não é obrigatória para administradores[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "MFA is mandatory for admins"
+  ],
+  "tr_claims": [
+   "A MFA não é obrigatória para administradores"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: nobody can -> todos podem",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Nobody can read the link[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Todos podem ler o link[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Nobody can read the link"
+  ],
+  "tr_claims": [
+   "Todos podem ler o link"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: no need to -> é necessário",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>There is no need to change it[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>É necessário trocá-la[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "There is no need to change it"
+  ],
+  "tr_claims": [
+   "É necessário trocá-la"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: don't need a symbol -> precisa",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>You don't need a symbol[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Você precisa de um símbolo[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "You don't need a symbol"
+  ],
+  "tr_claims": [
+   "Você precisa de um símbolo"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: no longer need to -> precisam",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Users no longer need to change passwords[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Os usuários precisam trocar de senha[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users no longer need to change passwords"
+  ],
+  "tr_claims": [
+   "Os usuários precisam trocar de senha"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: isn't required -> é exigida",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Complexity isn't required[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>A complexidade é exigida[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Complexity isn't required"
+  ],
+  "tr_claims": [
+   "A complexidade é exigida"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: will be required -> não vai ser exigida (null form)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>MFA will be required for admins[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>A MFA não vai ser exigida para administradores[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "MFA will be required for admins"
+  ],
+  "tr_claims": [
+   "A MFA não vai ser exigida para administradores"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: will not be required -> vai ser exigida (null form)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Expiry will not be required[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>A expiração vai ser exigida[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Expiry will not be required"
+  ],
+  "tr_claims": [
+   "A expiração vai ser exigida"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: must not only check -> não devem verificar",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Verifiers must not only check length[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Os verificadores não devem verificar o tamanho[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Verifiers must not only check length"
+  ],
+  "tr_claims": [
+   "Os verificadores não devem verificar o tamanho"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP pt: substring - negating prefix on page",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>the verifiers must impose composition rules[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>É falso que os verificadores devem impor regras de composição[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "the verifiers must impose composition rules"
+  ],
+  "tr_claims": [
+   "os verificadores devem impor regras de composição"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "FP pt: substring - qualifying suffix after marker",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Passwords must be 15 characters[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>As senhas devem ter 15 caracteres[1], exceto as de administradores, que não têm mínimo.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be 15 characters"
+  ],
+  "tr_claims": [
+   "As senhas devem ter 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "FP es: have to -> no hay que",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>You have to change it[1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T tr</title></head><body><main><p>No hay que cambiarla[1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "You have to change it"
+  ],
+  "tr_claims": [
+   "No hay que cambiarla"
+  ],
+  "expect": "block",
+  "check": "normative",
+  "known_gap": true
+ },
+ {
+  "name": "FP es: can -> no se puede",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>The list can be disabled[1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T tr</title></head><body><main><p>No se puede desactivar la lista[1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "The list can be disabled"
+  ],
+  "tr_claims": [
+   "No se puede desactivar la lista"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP es: must -> no se debe",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Passwords must be written down[1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T tr</title></head><body><main><p>No se debe anotar las contraseñas[1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "Passwords must be written down"
+  ],
+  "tr_claims": [
+   "No se debe anotar las contraseñas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP de: may -> darf, <relative clause>, nicht",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Users may reuse passwords that have leaked[1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Benutzer dürfen Passwörter, die geleakt wurden, nicht weiterverwenden[1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users may reuse passwords that have leaked"
+  ],
+  "tr_claims": [
+   "Benutzer dürfen Passwörter, die geleakt wurden, nicht weiterverwenden"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP de: may -> dürfen z. B. keine",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Users may use old passwords[1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Benutzer dürfen z. B. keine alten Passwörter verwenden[1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users may use old passwords"
+  ],
+  "tr_claims": [
+   "Benutzer dürfen z. B. keine alten Passwörter verwenden"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP de: must -> müssen keinesfalls",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Users must change passwords[1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Benutzer müssen ihre Passwörter keinesfalls ändern[1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users must change passwords"
+  ],
+  "tr_claims": [
+   "Benutzer müssen ihre Passwörter keinesfalls ändern"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP de: can -> kann unmöglich / niemand kann",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Anyone can read the link[1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Niemand kann den Link lesen[1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Anyone can read the link"
+  ],
+  "tr_claims": [
+   "Niemand kann den Link lesen"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP zh: need -> 未必需要",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>You need a symbol[1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>您未必需要符号[1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "You need a symbol"
+  ],
+  "tr_claims": [
+   "您未必需要符号"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP zh: no longer need to -> 需要",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Users no longer need to change passwords[1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>用户需要更改密码[1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users no longer need to change passwords"
+  ],
+  "tr_claims": [
+   "用户需要更改密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FP zh: need -> 不一定需要",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>You need a symbol[1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>您不一定需要符号[1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "You need a symbol"
+  ],
+  "tr_claims": [
+   "您不一定需要符号"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "FB pt: may not (might not) -> pode não ser",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>This may not be enough[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Isso pode não ser suficiente[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "This may not be enough"
+  ],
+  "tr_claims": [
+   "Isso pode não ser suficiente"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: could -> poderia",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>An attacker could try every word[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Um atacante poderia testar todas as palavras[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "An attacker could try every word"
+  ],
+  "tr_claims": [
+   "Um atacante poderia testar todas as palavras"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: so that X can -> para que possam",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>It is stored so that users can sign in[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Ela é armazenada para que os usuários possam entrar[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "It is stored so that users can sign in"
+  ],
+  "tr_claims": [
+   "Ela é armazenada para que os usuários possam entrar"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: we can -> podemos",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>We can check a password against the list[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Podemos comparar uma senha com a lista[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "We can check a password against the list"
+  ],
+  "tr_claims": [
+   "Podemos comparar uma senha com a lista"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: requires -> requer",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>The policy requires a symbol[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>A política requer um símbolo[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The policy requires a symbol"
+  ],
+  "tr_claims": [
+   "A política requer um símbolo"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: requiring -> exigindo",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Requiring symbols makes passwords predictable[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Exigindo símbolos, as senhas ficam previsíveis[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Requiring symbols makes passwords predictable"
+  ],
+  "tr_claims": [
+   "Exigindo símbolos, as senhas ficam previsíveis"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: recommended (past) -> recomendou",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>NIST recommended this in 2017[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>O NIST recomendou isso em 2017[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST recommended this in 2017"
+  ],
+  "tr_claims": [
+   "O NIST recomendou isso em 2017"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: we recommend -> recomendamos",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>We recommend a password manager[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Recomendamos um gerenciador de senhas[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "We recommend a password manager"
+  ],
+  "tr_claims": [
+   "Recomendamos um gerenciador de senhas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: are not required -> não são exigidas",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Periodic changes are not required[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>As trocas periódicas não são exigidas[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Periodic changes are not required"
+  ],
+  "tr_claims": [
+   "As trocas periódicas não são exigidas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: no longer need to -> não precisam mais",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Users no longer need to change passwords[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Os usuários não precisam mais trocar de senha[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users no longer need to change passwords"
+  ],
+  "tr_claims": [
+   "Os usuários não precisam mais trocar de senha"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: can no longer -> não pode mais",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>An attacker can no longer guess offline[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Um atacante não pode mais adivinhar offline[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "An attacker can no longer guess offline"
+  ],
+  "tr_claims": [
+   "Um atacante não pode mais adivinhar offline"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: In May, (month, no year)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>In May, NIST published the draft[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Em maio, o NIST publicou a minuta[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "In May, NIST published the draft"
+  ],
+  "tr_claims": [
+   "Em maio, o NIST publicou a minuta"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: needs (noun)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>The policy ignores user needs[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>A política ignora as necessidades dos usuários[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The policy ignores user needs"
+  ],
+  "tr_claims": [
+   "A política ignora as necessidades dos usuários"
+  ],
+  "expect": "block",
+  "check": "normative",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: must not only -> devem não apenas",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Verifiers must not only check length but also the blocklist[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Os verificadores devem não apenas verificar o tamanho, mas também a lista de bloqueio[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Verifiers must not only check length but also the blocklist"
+  ],
+  "tr_claims": [
+   "Os verificadores devem não apenas verificar o tamanho, mas também a lista de bloqueio"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: clause order swapped",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>You can set a length, and users must follow it[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Os usuários devem segui-lo, e você pode definir um tamanho[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "You can set a length, and users must follow it"
+  ],
+  "tr_claims": [
+   "Os usuários devem segui-lo, e você pode definir um tamanho"
+  ],
+  "expect": "block",
+  "check": "normative",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: abbr title inside the claim",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>NIST says the list is tested first[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>O <abbr title=\"National Institute of Standards and Technology\">NIST</abbr> diz que a lista é testada primeiro[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST says the list is tested first"
+  ],
+  "tr_claims": [
+   "O NIST diz que a lista é testada primeiro"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB de: must not only -> müssen nicht nur",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Verifiers must check not just length but also the blocklist[1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Prüfer müssen nicht nur die Länge prüfen, sondern auch die Sperrliste[1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Verifiers must check not just length but also the blocklist"
+  ],
+  "tr_claims": [
+   "Prüfer müssen nicht nur die Länge prüfen, sondern auch die Sperrliste"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB de: must not -> darf, <relative clause>, nicht",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Users must not reuse passwords that have leaked[1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Benutzer dürfen Passwörter, die geleakt wurden, nicht weiterverwenden[1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users must not reuse passwords that have leaked"
+  ],
+  "tr_claims": [
+   "Benutzer dürfen Passwörter, die geleakt wurden, nicht weiterverwenden"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB de: could -> könnte",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>An attacker could try every word[1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Ein Angreifer könnte jedes Wort ausprobieren[1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "An attacker could try every word"
+  ],
+  "tr_claims": [
+   "Ein Angreifer könnte jedes Wort ausprobieren"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB zh: can -> 可 / 能",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>The hash can be cracked[1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>该哈希可被破解[1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "The hash can be cracked"
+  ],
+  "tr_claims": [
+   "该哈希可被破解"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB zh: requirements (noun) -> 要求",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Composition rules are password requirements from the past[1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>组成规则是过去的密码要求[1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Composition rules are password requirements from the past"
+  ],
+  "tr_claims": [
+   "组成规则是过去的密码要求"
+  ],
+  "expect": "block",
+  "check": "normative",
+  "known_gap": true
+ },
+ {
+  "name": "FB zh: cheap -> 便宜",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>A cheap card is enough[1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>一块便宜的显卡就够了[1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "A cheap card is enough"
+  ],
+  "tr_claims": [
+   "一块便宜的显卡就够了"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB zh: may (possibility) -> 可能",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>It may take years[1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>这可能要花数年[1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "It may take years"
+  ],
+  "tr_claims": [
+   "这可能要花数年"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB es: don't have to -> no hay que",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>You don't have to change it[1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T tr</title></head><body><main><p>No hay que cambiarla[1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "You don't have to change it"
+  ],
+  "tr_claims": [
+   "No hay que cambiarla"
+  ],
+  "expect": "block",
+  "check": "normative",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: two-factor -> de dois fatores",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>Turn on two-factor authentication.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Ative a autenticação de dois fatores.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: three-word passphrase -> de três palavras",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>a three-word passphrase</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>uma frase-senha de três palavras</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: both X and Y -> tanto X quanto Y",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>Both NIST and OWASP say so.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Tanto o NIST quanto a OWASP dizem isso.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: twice -> duas vezes",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>twice as fast</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>duas vezes mais rápido</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: 1 hour -> uma hora",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 1 hour</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva uma hora</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: one hour -> 1 hora",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes one hour</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 1 hora</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: a billion -> 1 bilhão",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>a billion guesses</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>1 bilhão de tentativas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: 1,000 -> mil",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>1,000 terms</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>mil termos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: 1 in 4 -> um em cada quatro",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>1 in 4 users</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>um em cada quatro usuários</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: two hundred -> duzentos",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>two hundred accounts</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>duzentas contas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: 21st century -> século XXI",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>in the 21st century</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>no século XXI</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: 2:30 pm -> 14h30",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>at 2:30 pm</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>às 14h30</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: en SA-style 10 000 -> 10.000",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>10 000 passwords</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>10.000 senhas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: date 17 September 2026 -> 17/09/2026",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>On 17 September 2026</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Em 17/09/2026</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: Sept. 17, 2026 abbreviated in English",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>On Sept. 17, 2026</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Em 17 de setembro de 2026</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: September 17th, 2026",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>On September 17th, 2026</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Em 17 de setembro de 2026</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: ISO 2026-09-17 -> 17 de setembro de 2026",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>updated 2026-09-17</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>atualizado em 17 de setembro de 2026</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: 10k -> 10 mil",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>10k guesses</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>10 mil tentativas</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB pt: identical <code> with 0.250",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>run <code>sleep 0.250</code></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>execute <code>sleep 0.250</code></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: identical <code> with 1,000",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>run <code>head -c 1,000</code></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>execute <code>head -c 1,000</code></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: source link already under /pt/",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p><a href=\"https://example.gov/pt/guia\">guide</a></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p><a href=\"https://example.gov/pt/guia\">guia</a></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB de: source link under /de/ (BSI style)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p><a href=\"https://www.bsi.bund.de/de/Themen\">BSI</a></p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p><a href=\"https://www.bsi.bund.de/de/Themen\">BSI</a></p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB es: source link under /es/",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p><a href=\"https://www.incibe.es/es/guia\">INCIBE</a></p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p><a href=\"https://www.incibe.es/es/guia\">INCIBE</a></p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB pt: 'pavilhão' read as unknown scale word",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>the hall is open</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>o pavilhão está aberto</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB de: two-factor -> Zwei-Faktor",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>Turn on two factor authentication.</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>Aktivieren Sie die Zwei-Faktor-Authentifizierung.</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB de: three thousand -> dreitausend",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>three thousand accounts</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>dreitausend Konten</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers",
+  "known_gap": true
+ },
+ {
+  "name": "FB zh: two words -> 两个单词",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>two words</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>两个单词</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB zh: three random words -> 三个随机单词",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>three random words</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>三个随机单词</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB zh: in September -> 9月",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>published in September</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>于9月发布</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB zh: 5 kilograms -> 5千克",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>weighs 5 kilograms</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>重5千克</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FB zh: 28,000 -> 2.8万",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>28,000 accounts</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>2.8万个账户</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "FP skip: new normative statement with a number inside allowed <aside data-i18n-skip>",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><aside data-i18n-skip><p>As senhas devem ter no mínimo 6 caracteres e nunca precisam ser trocadas.</p></aside></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "skip"
+ },
+ {
+  "name": "FP skip: 1,990 chars of new text in <nav data-i18n-skip>",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><nav data-i18n-skip>Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. </nav></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "skip"
+ },
+ {
+  "name": "FP skip: unbounded text in img alt inside skipped aside",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><aside data-i18n-skip><img src=\"x.png\" alt=\"Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. Senhas de 6 caracteres bastam. \"></aside></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "skip"
+ },
+ {
+  "name": "FP attr: placeholder number changed",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>x</p><input placeholder=\"at least 15 characters\"></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>x</p><input placeholder=\"pelo menos 6 caracteres\"></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP attr: img srcset changed when src is kept",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p><img src=\"/a.png\" srcset=\"/a-2x.png 2x\" alt=\"x\"></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p><img src=\"/a.png\" srcset=\"/OUTRA-2x.png 2x\" alt=\"x\"></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "FP link: external link retargeted under /pt/",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p><a href=\"https://nist.gov/sp800-63b\">NIST</a></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p><a href=\"https://nist.gov/pt/sp800-63b\">NIST</a></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "FP link: iframe src changed",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>x</p><iframe src=\"https://a.example/embed\"></iframe></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>x</p><iframe src=\"https://b.example/embed\"></iframe></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "FP marker: citation [1] added to an uncited sentence",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>B is true.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>B é verdade[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "FP parser: stray <head> in body hides text the browser shows",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 254 dias<head> ou 999 anos com bcrypt</head></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP parser: <template> is not counted as skipped text",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 254 dias</p><template><p>ou 999 anos</p></template></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "FP parser: <!--> comment (browser ends it at once)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 254 dias<!--> ou 999 anos com bcrypt --></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP parser: <!-- --!> comment end",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler claim zz[1].</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>Frase de enchimento zz[1].</p><p>leva 254 dias<!-- x --!> ou 999 anos com bcrypt <!-- y --></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP head: JSON-LD description number changed",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"description\":\"Cracked in 254 days\"}</script></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title><script type=\"application/ld+json\">{\"description\":\"Quebrada em 999 anos\"}</script></head><body><main><p>Frase de enchimento zz[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP head: duplicate meta description, first one wrong (first wins in browsers)",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta name=\"description\" content=\"Cracked in 254 days\"></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title><meta name=\"description\" content=\"Quebrada em 999 anos\"><meta name=\"description\" content=\"Quebrada em 254 dias\"></head><body><main><p>Frase de enchimento zz[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "page",
+  "known_gap": true
+ },
+ {
+  "name": "FP head: published_time changed",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta property=\"article:published_time\" content=\"2026-11-22\"></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title><meta property=\"article:published_time\" content=\"2020-01-01\"></head><body><main><p>Frase de enchimento zz[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "FP head: og:image points to another picture",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta property=\"og:image\" content=\"https://x.example/a.jpg\"></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title><meta property=\"og:image\" content=\"https://x.example/OUTRA.jpg\"></head><body><main><p>Frase de enchimento zz[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "FP head: description scale words billions -> milhares (real description wording)",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta name=\"description\" content=\"A random one can take billions of years.\"></head><body><main><p>Filler claim zz[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title><meta name=\"description\" content=\"Uma aleatória pode levar milhares de anos.\"></head><body><main><p>Frase de enchimento zz[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "FP php: text printed by PHP is invisible",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><main><p>Filler claim zz[1].</p><?= \"<p>takes 254 days</p>\" ?></main>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><main><p>Frase de enchimento zz[1].</p><?= \"<p>leva 999 anos</p>\" ?></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Filler claim zz"
+  ],
+  "tr_claims": [
+   "Frase de enchimento zz"
+  ],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "FP binding: back-translator 'Opus' vs translator 'opus' counted as a different model",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>A is true[1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T tr</title></head><body><main><p>A é verdade[1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A is true"
+  ],
+  "tr_claims": [
+   "A é verdade"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ }
+]

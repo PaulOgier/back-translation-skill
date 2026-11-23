@@ -1,0 +1,287 @@
+{
+ "lang": "zh-Hans",
+ "lang_tags": ["zh-Hans", "zh", "zh-CN", "zh-SG"],
+ "name": "Chinese (Simplified)",
+ "word_boundaries": false,
+ "decimal": ".",
+ "group": [
+  ","
+ ],
+ "scale_words": {
+  "千": 1000.0,
+  "万": 10000.0,
+  "十万": 100000.0,
+  "百万": 1000000.0,
+  "千万": 10000000.0,
+  "亿": 100000000.0,
+  "十亿": 1000000000.0,
+  "百亿": 10000000000.0,
+  "千亿": 100000000000.0,
+  "万亿": 1000000000000.0,
+  "亿亿": 1e+16,
+  "京": 1e+16
+ },
+ "ambiguous_scale": [
+  "兆"
+ ],
+ "ambiguous_scale_why": "兆 is 10^6 or 10^12 depending on context; write 万亿 or 百万",
+ "combine_scales": true,
+ "units": {
+  "second": [
+   "秒",
+   "秒钟"
+  ],
+  "minute": [
+   "分钟"
+  ],
+  "hour": [
+   "小时"
+  ],
+  "day": [
+   "天"
+  ],
+  "week": [
+   "周",
+   "星期"
+  ],
+  "month": [
+   "个月"
+  ],
+  "year": [
+   "年"
+  ],
+  "character": [
+   "字符",
+   "个字符"
+  ],
+  "word": [
+   "个单词",
+   "单词",
+   "个词",
+   "词"
+  ],
+  "percent": [
+   "%",
+   "％"
+  ],
+  "millisecond": [
+   "毫秒"
+  ],
+  "decade": [
+   "十年"
+  ],
+  "century": [
+   "世纪"
+  ],
+  "kilobyte": [
+   "KB",
+   "千字节"
+  ],
+  "megabyte": [
+   "MB",
+   "兆字节"
+  ],
+  "gigabyte": [
+   "GB"
+  ],
+  "terabyte": [
+   "TB"
+  ],
+  "bit": [
+   "位",
+   "比特"
+  ],
+  "byte": [
+   "字节"
+  ]
+ },
+ "unit_gap": "\\s*个?[^\\s\\d]{0,3}?",
+ "normative": [
+  {
+   "kind": null,
+   "forms": [
+    "应用",
+    "回应",
+    "响应",
+    "相应",
+    "对应",
+    "应对",
+    "供应",
+    "反应",
+    "适应",
+    "应急",
+    "答应",
+    "需求",
+    "便宜",
+    "不可逆",
+    "很可能"
+   ]
+  },
+  {
+   "kind": "need-not",
+   "forms": [
+    "不是必须",
+    "并非必须",
+    "不必",
+    "无需",
+    "无须",
+    "不需要",
+    "不用",
+    "未必需要",
+    "不一定需要",
+    "不一定要",
+    "不再需要",
+    "不要求",
+    "不再要求",
+    "没有必要",
+    "没必要",
+    "不需",
+    "毋须",
+    "未必须"
+   ]
+  },
+  {
+   "kind": "must",
+   "forms": [
+    "不得不",
+    "必须",
+    "须",
+    "需要",
+    "需",
+    "应当",
+    "务必",
+    "要求",
+    "必需"
+   ]
+  },
+  {
+   "kind": "must-not",
+   "forms": [
+    "不得",
+    "禁止",
+    "不准",
+    "严禁",
+    "切勿",
+    "必须不"
+   ]
+  },
+  {
+   "kind": "should-not",
+   "forms": [
+    "不应该",
+    "不应",
+    "不宜",
+    "不建议",
+    "不太应该"
+   ]
+  },
+  {
+   "kind": "may-not",
+   "forms": [
+    "不可以",
+    "不能",
+    "无法",
+    "不可",
+    "不一定可以",
+    "不太可以"
+   ]
+  },
+  {
+   "kind": "should",
+   "forms": [
+    "应该",
+    "应",
+    "宜",
+    "建议",
+    "推荐"
+   ]
+  },
+  {
+   "kind": "may",
+   "forms": [
+    "可以",
+    "能够",
+    "可选",
+    "可被",
+    "可能"
+   ]
+  }
+ ],
+ "forbidden": [],
+ "months": [],
+ "date_patterns": [
+  "(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})",
+  "(?P<y>\\d{4})\\s*年\\s*(?P<m>\\d{1,2})\\s*月\\s*(?P<d>\\d{1,2})\\s*[日号]",
+  "(?P<y>\\d{4})\\s*年\\s*(?P<m>\\d{1,2})\\s*月",
+  "(?P<m>\\d{1,2})\\s*月\\s*(?P<d>\\d{1,2})\\s*[日号]",
+  "(?P<m>\\d{1,2})\\s*月(?![\\d份])"
+ ],
+ "sentence_end": "。！？",
+ "min_length_ratio": 0.15,
+ "notes": "Chinese groups by 万 (10^4) and 亿 (10^8): 10.7 billion is 107亿, and 1亿2000万 is read as one number. 应当 is shall in PRC standards, so it is must; should is 应该, 应, 宜 or 建议. 不得不 (have to) is must, not 不得. Number words (一 二 三) are not checked: they occur inside ordinary words. Number words 二 to 十 and 两 count only before a measure word (三个, 两种); 一 never counts, since 一个 is the article. 千 before 克, 米 or 字节 is a unit prefix, not a scale. Bare 万 and 亿 are not numbers of their own: they occur in ordinary words.",
+ "bare_scales": false,
+ "scale_not_before": "[克米瓦]|字节|赫",
+ "number_words": {
+  "两": 2,
+  "二": 2,
+  "三": 3,
+  "四": 4,
+  "五": 5,
+  "六": 6,
+  "七": 7,
+  "八": 8,
+  "九": 9,
+  "十": 10
+ },
+ "number_word_follow": "(?=个|种|次|位|名|项|条|天|年|小时|分钟|秒|周|倍|组)",
+ "comparators": {
+  "before": {
+   "min": [
+    "至少",
+    "最少",
+    "不少于"
+   ],
+   "max": [
+    "最多",
+    "至多",
+    "不超过",
+    "不多于"
+   ],
+   "gt": [
+    "超过",
+    "多于",
+    "大于"
+   ],
+   "lt": [
+    "少于",
+    "不到",
+    "小于"
+   ]
+  },
+  "after": {
+   "min": [
+    "以上"
+   ],
+   "max": [
+    "以下"
+   ],
+   "before": [
+    "之前",
+    "以前"
+   ],
+   "after": [
+    "之后",
+    "以后"
+   ]
+  }
+ },
+ "bare_scale_words": {
+  "数十亿": 1000000000.0,
+  "数亿": 100000000.0,
+  "数百万": 1000000.0,
+  "数十万": 100000.0,
+  "数万": 10000.0,
+  "数千": 1000.0
+ },
+ "unit_before": "每\\s*(?P<u>秒钟|秒|分钟|小时|天|周|年)\\s*$"
+}

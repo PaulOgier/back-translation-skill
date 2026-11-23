@@ -1,0 +1,486 @@
+{
+ "lang": "es",
+ "lang_tags": ["es"],
+ "name": "Spanish",
+ "word_boundaries": true,
+ "decimal": ",",
+ "group": [
+  ".",
+  " ",
+  " ",
+  " "
+ ],
+ "scale_words": {
+  "mil": 1000.0,
+  "millón": 1000000.0,
+  "millones": 1000000.0,
+  "mil millones": 1000000000.0,
+  "billón": 1000000000000.0,
+  "billones": 1000000000000.0,
+  "mil billones": 1000000000000000.0,
+  "trillón": 1e+18,
+  "trillones": 1e+18,
+  "mil trillones": 1e+21,
+  "cuatrillón": 1e+24,
+  "cuatrillones": 1e+24,
+  "cientos": 100.0,
+  "miles": 1000.0,
+  "miles de millones": 1000000000.0
+ },
+ "unknown_scale": "(?<![\\w-])\\w+ill(?:ón|ones|ardo|ardos)(?![\\w-])",
+ "number_words": {
+  "cero": 0,
+  "dos": 2,
+  "tres": 3,
+  "cuatro": 4,
+  "cinco": 5,
+  "seis": 6,
+  "siete": 7,
+  "ocho": 8,
+  "nueve": 9,
+  "diez": 10,
+  "once": 11,
+  "doce": 12,
+  "trece": 13,
+  "catorce": 14,
+  "quince": 15,
+  "dieciséis": 16,
+  "diecisiete": 17,
+  "dieciocho": 18,
+  "diecinueve": 19,
+  "veinte": 20,
+  "veintiuno": 21,
+  "veintiuna": 21,
+  "veintidós": 22,
+  "veintitrés": 23,
+  "veinticuatro": 24,
+  "veinticinco": 25,
+  "veintiséis": 26,
+  "veintisiete": 27,
+  "veintiocho": 28,
+  "veintinueve": 29,
+  "treinta": 30,
+  "cuarenta": 40,
+  "cincuenta": 50,
+  "sesenta": 60,
+  "setenta": 70,
+  "ochenta": 80,
+  "noventa": 90,
+  "ambos": 2,
+  "ambas": 2,
+  "cien": 100,
+  "doscientos": 200,
+  "doscientas": 200,
+  "trescientos": 300,
+  "trescientas": 300,
+  "cuatrocientos": 400,
+  "cuatrocientas": 400,
+  "quinientos": 500,
+  "quinientas": 500,
+  "seiscientos": 600,
+  "seiscientas": 600,
+  "setecientos": 700,
+  "setecientas": 700,
+  "ochocientos": 800,
+  "ochocientas": 800,
+  "novecientos": 900,
+  "novecientas": 900
+ },
+ "tens": {
+  "treinta": 30,
+  "cuarenta": 40,
+  "cincuenta": 50,
+  "sesenta": 60,
+  "setenta": 70,
+  "ochenta": 80,
+  "noventa": 90
+ },
+ "compound_units": {
+  "uno": 1,
+  "una": 1,
+  "un": 1,
+  "dos": 2,
+  "tres": 3,
+  "cuatro": 4,
+  "cinco": 5,
+  "seis": 6,
+  "siete": 7,
+  "ocho": 8,
+  "nueve": 9
+ },
+ "compound": [
+  "{t} y {u}"
+ ],
+ "units": {
+  "second": [
+   "segundo",
+   "segundos"
+  ],
+  "minute": [
+   "minuto",
+   "minutos",
+   "min"
+  ],
+  "hour": [
+   "hora",
+   "horas"
+  ],
+  "day": [
+   "día",
+   "días"
+  ],
+  "week": [
+   "semana",
+   "semanas"
+  ],
+  "month": [
+   "mes",
+   "meses"
+  ],
+  "year": [
+   "año",
+   "años"
+  ],
+  "character": [
+   "carácter",
+   "caracteres"
+  ],
+  "word": [
+   "palabra",
+   "palabras"
+  ],
+  "percent": [
+   "%",
+   "por ciento"
+  ],
+  "millisecond": [
+   "milisegundo",
+   "milisegundos",
+   "ms"
+  ],
+  "decade": [
+   "década",
+   "décadas"
+  ],
+  "century": [
+   "siglo",
+   "siglos"
+  ],
+  "kilobyte": [
+   "KB",
+   "kB"
+  ],
+  "megabyte": [
+   "MB"
+  ],
+  "gigabyte": [
+   "GB"
+  ],
+  "terabyte": [
+   "TB"
+  ],
+  "bit": [
+   "bit",
+   "bits"
+  ],
+  "byte": [
+   "byte",
+   "bytes"
+  ]
+ },
+ "unit_gap": "\\s*(?:de\\s+)?(?:(?=[^\\s\\d.,;:!?]*[^\\W\\d_])[^\\s\\d.,;:!?]+\\s+){0,2}?",
+ "normative": [
+  {
+   "kind": null,
+   "bare": "must",
+   "negated": "need-not",
+   "forms": [
+    "ser exigido",
+    "ser exigida",
+    "ser exigidos",
+    "ser exigidas",
+    "ser obligatorio",
+    "ser obligatoria"
+   ]
+  },
+  {
+   "kind": null,
+   "bare": "should",
+   "negated": "should-not",
+   "forms": [
+    "ser recomendado",
+    "ser recomendada"
+   ]
+  },
+  {
+   "kind": "must-not",
+   "forms": [
+    "no debe",
+    "no deben",
+    "no deberá",
+    "no deberán",
+    "está prohibido",
+    "está prohibida",
+    "no debes",
+    "no deberás"
+   ]
+  },
+  {
+   "kind": "should-not",
+   "forms": [
+    "no debería",
+    "no deberían",
+    "no se recomienda",
+    "no recomendado",
+    "no recomendada",
+    "no deberías"
+   ]
+  },
+  {
+   "kind": "may-not",
+   "forms": [
+    "no puede",
+    "no pueden",
+    "no podrá",
+    "no podrán",
+    "no puedes",
+    "no podrás"
+   ]
+  },
+  {
+   "kind": "need-not",
+   "forms": [
+    "no necesita",
+    "no necesitan",
+    "no tiene que",
+    "no tienen que",
+    "no hace falta",
+    "no es necesario",
+    "no es obligatorio",
+    "no necesitas",
+    "no tienes que",
+    "no tiene por qué",
+    "no tienes por qué"
+   ]
+  },
+  {
+   "kind": "must",
+   "negated": "must-not",
+   "forms": [
+    "debe",
+    "deben",
+    "deberá",
+    "deberán",
+    "debes",
+    "deberás"
+   ]
+  },
+  {
+   "kind": "must",
+   "negated": "need-not",
+   "forms": [
+    "tiene que",
+    "tienen que",
+    "hay que",
+    "necesita",
+    "necesitan",
+    "es necesario",
+    "obligatorio",
+    "obligatoria",
+    "obligatorios",
+    "obligatorias",
+    "exigir",
+    "exige",
+    "exigen",
+    "requiere",
+    "requieren",
+    "tienes que",
+    "necesitas",
+    "tendrá que",
+    "tendrás que"
+   ]
+  },
+  {
+   "kind": "should",
+   "negated": "should-not",
+   "forms": [
+    "debería",
+    "deberían",
+    "se recomienda",
+    "recomienda",
+    "recomiendan",
+    "recomendado",
+    "recomendada",
+    "recomendados",
+    "recomendadas",
+    "deberías",
+    "recomendamos"
+   ]
+  },
+  {
+   "kind": "may",
+   "negated": "may-not",
+   "forms": [
+    "puede",
+    "pueden",
+    "podrá",
+    "podrán",
+    "podría",
+    "podrían",
+    "pudo",
+    "logró",
+    "opcional",
+    "opcionales",
+    "puedes",
+    "podrás",
+    "podrías",
+    "pueda",
+    "puedan",
+    "puedas"
+   ]
+  },
+  {
+   "kind": "may",
+   "forms": [
+    "permitido",
+    "permitida",
+    "permitidos",
+    "permitidas"
+   ],
+   "negated": "may-not"
+  }
+ ],
+ "forbidden": [
+  {
+   "form": "debe de",
+   "why": "deber de expresses likelihood, not obligation; use debe"
+  },
+  {
+   "form": "deben de",
+   "why": "deber de expresses likelihood, not obligation; use deben"
+  },
+  {
+   "form": "no hay que",
+   "why": "reads as must not and as need not; use no debe or no es necesario"
+  }
+ ],
+ "months": [
+  "enero",
+  "febrero",
+  "marzo",
+  "abril",
+  "mayo",
+  "junio",
+  "julio",
+  "agosto",
+  "septiembre",
+  "octubre",
+  "noviembre",
+  "diciembre"
+ ],
+ "date_patterns": [
+  "\\b(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})\\b",
+  "\\b(?P<d>\\d{1,2})\\s+de\\s+(?P<m>{months})\\s+de\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<d>\\d{1,2})/(?P<m>\\d{1,2})/(?P<y>\\d{4})\\b",
+  "\\b(?P<m>{months})\\s+de\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<d>\\d{1,2})\\s+de\\s+(?P<m>{months})\\b",
+  "\\b(?:en|desde|hasta|durante)\\s+(?P<m>{months})\\b"
+ ],
+ "min_length_ratio": 0.5,
+ "notes": "English billion is mil millones; billón is 10^12. Translating billion as billón is the classic thousand-fold error and this map catches it. debe is must; should is always debería.",
+ "negators": [
+  "no",
+  "nunca",
+  "jamás",
+  "nadie",
+  "ninguno",
+  "ninguna",
+  "ningún",
+  "ni",
+  "tampoco",
+  "nada",
+  "en ningún caso",
+  "de ningún modo",
+  "de ninguna manera"
+ ],
+ "negation_window": [
+  3,
+  1
+ ],
+ "negation_skip": [
+  "no solo",
+  "no sólo",
+  "no solamente",
+  "no únicamente",
+  "no más de",
+  "no menos de"
+ ],
+ "clause_breaks": [
+  "y",
+  "o",
+  "pero",
+  "sino",
+  "que",
+  "porque",
+  "cuando",
+  "mientras"
+ ],
+ "comparators": {
+  "before": {
+   "min": [
+    "al menos",
+    "por lo menos",
+    "como mínimo",
+    "un mínimo de",
+    "mínimo de",
+    "mínima de",
+    "mínima",
+    "mínimo"
+   ],
+   "max": [
+    "como máximo",
+    "un máximo de",
+    "máximo de",
+    "máxima de",
+    "máxima",
+    "máximo",
+    "hasta"
+   ],
+   "gt": [
+    "más de",
+    "más que"
+   ],
+   "lt": [
+    "menos de",
+    "menos que"
+   ],
+   "before": [
+    "antes de",
+    "antes del"
+   ],
+   "after": [
+    "después de",
+    "después del",
+    "tras"
+   ]
+  },
+  "after": {
+   "min": [
+    "o más",
+    "como mínimo"
+   ],
+   "max": [
+    "o menos",
+    "como máximo"
+   ]
+  }
+ },
+ "relative_words": [
+  "que",
+  "quien",
+  "quienes",
+  "cuyo",
+  "cuya"
+ ],
+ "relative_window": 2
+}

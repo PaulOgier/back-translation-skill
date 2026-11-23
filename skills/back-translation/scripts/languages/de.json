@@ -1,0 +1,354 @@
+{
+ "lang": "de",
+ "lang_tags": ["de"],
+ "name": "German (Sie)",
+ "word_boundaries": true,
+ "decimal": ",",
+ "group": [
+  ".",
+  " ",
+  " ",
+  " "
+ ],
+ "scale_words": {
+  "Tausend": 1000.0,
+  "Million": 1000000.0,
+  "Millionen": 1000000.0,
+  "Mio.": 1000000.0,
+  "Milliarde": 1000000000.0,
+  "Milliarden": 1000000000.0,
+  "Mrd.": 1000000000.0,
+  "Billion": 1000000000000.0,
+  "Billionen": 1000000000000.0,
+  "Billiarde": 1000000000000000.0,
+  "Billiarden": 1000000000000000.0,
+  "Trillion": 1e+18,
+  "Trillionen": 1e+18,
+  "Trilliarde": 1e+21,
+  "Trilliarden": 1e+21,
+  "hundert": 100.0,
+  "Hunderte": 100.0,
+  "Hunderten": 100.0,
+  "Tausende": 1000.0,
+  "Tausenden": 1000.0
+ },
+ "unknown_scale": "(?<![\\w-])\\w+illi(?:on|onen|arde|arden)(?![\\w-])",
+ "number_words": {
+  "zwei": 2,
+  "drei": 3,
+  "vier": 4,
+  "fünf": 5,
+  "sechs": 6,
+  "sieben": 7,
+  "acht": 8,
+  "neun": 9,
+  "zehn": 10,
+  "elf": 11,
+  "zwölf": 12,
+  "dreizehn": 13,
+  "vierzehn": 14,
+  "fünfzehn": 15,
+  "sechzehn": 16,
+  "siebzehn": 17,
+  "achtzehn": 18,
+  "neunzehn": 19,
+  "zwanzig": 20,
+  "dreißig": 30,
+  "vierzig": 40,
+  "fünfzig": 50,
+  "sechzig": 60,
+  "siebzig": 70,
+  "achtzig": 80,
+  "neunzig": 90,
+  "beide": 2,
+  "beiden": 2,
+  "beides": 2
+ },
+ "tens": {
+  "zwanzig": 20,
+  "dreißig": 30,
+  "vierzig": 40,
+  "fünfzig": 50,
+  "sechzig": 60,
+  "siebzig": 70,
+  "achtzig": 80,
+  "neunzig": 90
+ },
+ "compound_units": {
+  "ein": 1,
+  "zwei": 2,
+  "drei": 3,
+  "vier": 4,
+  "fünf": 5,
+  "sechs": 6,
+  "sieben": 7,
+  "acht": 8,
+  "neun": 9
+ },
+ "compound": [
+  "{u}und{t}"
+ ],
+ "units": {
+  "second": [
+   "Sekunde",
+   "Sekunden"
+  ],
+  "minute": [
+   "Minute",
+   "Minuten",
+   "min"
+  ],
+  "hour": [
+   "Stunde",
+   "Stunden"
+  ],
+  "day": [
+   "Tag",
+   "Tage",
+   "Tagen"
+  ],
+  "week": [
+   "Woche",
+   "Wochen"
+  ],
+  "month": [
+   "Monat",
+   "Monate",
+   "Monaten"
+  ],
+  "year": [
+   "Jahr",
+   "Jahre",
+   "Jahren"
+  ],
+  "character": [
+   "Zeichen",
+   "stellig",
+   "stellige",
+   "stelliges",
+   "stelligen"
+  ],
+  "word": [
+   "Wort",
+   "Wörter",
+   "Wörtern"
+  ],
+  "percent": [
+   "%",
+   "Prozent"
+  ],
+  "millisecond": [
+   "Millisekunde",
+   "Millisekunden",
+   "ms"
+  ],
+  "decade": [
+   "Jahrzehnt",
+   "Jahrzehnte",
+   "Jahrzehnten"
+  ],
+  "century": [
+   "Jahrhundert",
+   "Jahrhunderte",
+   "Jahrhunderten"
+  ],
+  "kilobyte": [
+   "KB",
+   "kB"
+  ],
+  "megabyte": [
+   "MB"
+  ],
+  "gigabyte": [
+   "GB"
+  ],
+  "terabyte": [
+   "TB"
+  ],
+  "bit": [
+   "Bit"
+  ],
+  "byte": [
+   "Byte",
+   "Bytes"
+  ]
+ },
+ "negators": [
+  "nicht",
+  "kein",
+  "keine",
+  "keinen",
+  "keinem",
+  "keiner",
+  "keines",
+  "nie",
+  "niemals",
+  "keinesfalls",
+  "keineswegs",
+  "niemand",
+  "nichts",
+  "weder"
+ ],
+ "clause_breaks": [
+  "und",
+  "oder"
+ ],
+ "normative": [
+  {
+   "kind": "must",
+   "negated": "need-not",
+   "forms": [
+    "müssen",
+    "muss",
+    "musst",
+    "müsst",
+    "brauchen",
+    "braucht",
+    "brauchst",
+    "erforderlich",
+    "erfordert",
+    "erfordern",
+    "notwendig",
+    "nötig",
+    "verlangt",
+    "verlangen",
+    "vorgeschrieben",
+    "verpflichtend"
+   ]
+  },
+  {
+   "kind": "should",
+   "negated": "should-not",
+   "forms": [
+    "sollten",
+    "sollte",
+    "solltest",
+    "empfohlen",
+    "empfiehlt",
+    "empfehlen"
+   ]
+  },
+  {
+   "kind": "may",
+   "negated": "must-not",
+   "forms": [
+    "dürfen",
+    "darf",
+    "darfst",
+    "dürft"
+   ]
+  },
+  {
+   "kind": "may",
+   "negated": "may-not",
+   "forms": [
+    "können",
+    "kann",
+    "kannst",
+    "könnt",
+    "könnte",
+    "könnten",
+    "optional"
+   ]
+  },
+  {
+   "kind": "may",
+   "forms": [
+    "erlaubt"
+   ],
+   "negated": "may-not"
+  },
+  {
+   "kind": "must-not",
+   "forms": [
+    "verboten"
+   ]
+  }
+ ],
+ "forbidden": [
+  {
+   "form": "muss nicht",
+   "why": "means need not, not must not; use darf nicht, or nicht erforderlich for need not"
+  },
+  {
+   "form": "müssen nicht",
+   "why": "means need not, not must not; use dürfen nicht, or nicht erforderlich for need not"
+  },
+  {
+   "form": "soll",
+   "why": "ambiguous between shall and should; use muss or sollte"
+  },
+  {
+   "form": "sollen",
+   "why": "ambiguous between shall and should; use müssen or sollten"
+  }
+ ],
+ "months": [
+  "Januar",
+  "Februar",
+  "März",
+  "April",
+  "Mai",
+  "Juni",
+  "Juli",
+  "August",
+  "September",
+  "Oktober",
+  "November",
+  "Dezember"
+ ],
+ "date_patterns": [
+  "\\b(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})\\b",
+  "\\b(?P<d>\\d{1,2})\\.\\s*(?P<m>{months})\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<d>\\d{1,2})\\.\\s?(?P<m>\\d{1,2})\\.\\s?(?P<y>\\d{4})\\b",
+  "\\b(?P<m>{months})\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<d>\\d{1,2})\\.\\s*(?P<m>{months})\\b",
+  "\\b(?:im|seit|bis|ab)\\s+(?P<m>{months})\\b"
+ ],
+ "min_length_ratio": 0.5,
+ "notes": "English billion is Milliarde; Billion is 10^12. Negation is read per clause, relative clauses and z. B. skipped: darf with nicht or kein anywhere in its clause is must not; muss with nicht or kein is need not, so must not rendered as muss ... nicht blocks. vor and nach are before and after, so vor 5 Jahren (5 years ago) blocks against English ago until it is reworded.",
+ "negation_skip": [
+  "nicht nur",
+  "nicht mehr als",
+  "nicht weniger als"
+ ],
+ "relative_clause": ",\\s*(?:der|die|das|den|dem|deren|dessen|denen|welche[rsnm]?|wo|was)\\b[^,.;:!?]*,",
+ "comparators": {
+  "before": {
+   "min": [
+    "mindestens",
+    "minimal",
+    "nicht weniger als"
+   ],
+   "max": [
+    "höchstens",
+    "maximal",
+    "bis zu",
+    "nicht mehr als"
+   ],
+   "gt": [
+    "mehr als",
+    "über"
+   ],
+   "lt": [
+    "weniger als"
+   ],
+   "before": [
+    "vor"
+   ],
+   "after": [
+    "nach"
+   ]
+  },
+  "after": {
+   "min": [
+    "oder mehr",
+    "mindestens"
+   ],
+   "max": [
+    "oder weniger",
+    "höchstens"
+   ]
+  }
+ }
+}

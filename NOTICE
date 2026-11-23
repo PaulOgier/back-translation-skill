@@ -1,0 +1,5 @@
+Ideas adapted from other MIT-licensed agent skills (no code copied):
+
+- Glossary confidence levels and per-term sources: senshinji/claude-translation-skill
+- Image-text localisation list after translation: JimLiu/baoyu-skills (baoyu-translate)
+- Front matter provenance for Markdown translations: AgriciDaniel/claude-blog (blog-translate)

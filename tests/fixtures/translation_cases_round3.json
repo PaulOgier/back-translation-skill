@@ -1,0 +1,3147 @@
+[
+ {
+  "name": "ctl pass",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>leva 254 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "ctl block",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>takes 254 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>leva 245 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ctl claim pass",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate keys [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários devem trocar as chaves [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must rotate keys"
+  ],
+  "tr_claims": [
+   "Os usuários devem trocar as chaves"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "ctl claim block",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate keys [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários podem trocar as chaves [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must rotate keys"
+  ],
+  "tr_claims": [
+   "Os usuários podem trocar as chaves"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "or more -> ou menos",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use 15 or more characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use 15 ou menos caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "or more dropped",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use 15 or more characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use 15 caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "or more natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use 15 or more characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use 15 caracteres ou mais.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "or fewer days -> ou mais dias",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Locked for 30 or fewer days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Bloqueado por 30 ou mais dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "before date -> depois",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Accounts created before 17 September 2026 are affected.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Contas criadas depois de 17 de setembro de 2026 são afetadas.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "after date -> antes",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Valid after 1 January 2027.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Válido antes de 1 de janeiro de 2027.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "before September 2026 -> depois",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Created before September 2026.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Criadas depois de setembro de 2026.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "not more than -> mais de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Allow not more than 5 attempts.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Permita mais de 5 tentativas.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "not less than -> menos de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use not less than 8 characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use menos de 8 caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "not fewer than -> menos de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use not fewer than 8 characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use menos de 8 caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": ">= -> <=",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Length &ge; 8 characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Comprimento &le; 8 caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "> -> <",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Cost &gt; 10 is slow.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Custo &lt; 10 é lento.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "$ -> R$",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It costs $500 a card.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Custa R$ 500 por placa.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "$ -> €",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It costs $500.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Custa 500 €.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "over 5 years natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes over 5 years.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva mais de 5 anos.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "under 5 minutes natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes under 5 minutes.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva menos de 5 minutos.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "above 8 natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A work factor above 8.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Um fator de trabalho acima de 8.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "until 2025 natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Supported until 2025.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Suportado até 2025.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "by 2030 natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Expected by 2030.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Esperado até 2030.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "until -> desde",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Supported until 2025.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Suportado desde 2025.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "3 May -> 3 de junho",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Run on 3 May.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Executado em 3 de junho.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "May 3 -> 3 de junho",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Run on May 3.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Executado em 3 de junho.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "in May -> em junho (ctl)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Run in May.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Executado em junho.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "17 September -> 17 de outubro",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>On 17 September it returned.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Em 17 de outubro ele retornou.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "x -> %",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It is 10x faster.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>É 10% mais rápido.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "bare -> %",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Of 100 users, 5 reuse.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>De 100 usuários, 5% reutilizam.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "bits -> bytes",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A 256 bit key.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Uma chave de 256 bytes.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "days a week -> por mês",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Runs 5 days a week.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Roda 5 dias por mês.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "Days later (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It allowed 5 attempts. Days later it was fixed.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Permitiu 5 tentativas. Foi corrigido alguns dias depois.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "since -> até luck",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Supported since 2019.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Suportado antes de 2019.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "from 2019 -> até 2019",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Supported from 2019.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Suportado até 2019.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "every 90 days -> a cada 90 dias",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Rotate every 90 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Troque a cada 90 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "first 5 -> últimos 5",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The first 5 characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os últimos 5 caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "minimum 8 max 64 swap",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Minimum 8, maximum 64 characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Máximo 8, mínimo 64 caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "between -> até",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Between 8 and 64 characters.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Entre 8 e 64 caracteres.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "at least ... far",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>At least one of the following 5 rules.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Pelo menos uma das 5 regras seguintes.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "de: mehr als",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes more than 5 years.</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Es dauert mehr als 5 Jahre.</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "de: bis zu",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Up to 64 characters.</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Bis zu 64 Zeichen.</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "de: mindestens 8 Zeichen",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>At least 8 characters.</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Mindestens 8 Zeichen.</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "zh: per second",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>340.1 billion guesses per second.</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>每秒3401亿次猜测。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "zh: at least 8 chars",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>At least 8 characters.</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>至少8个字符。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "zh: 15 or more characters",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use 15 or more characters.</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>使用15个或更多字符。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "zh: application",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The application stores a hash for some users.</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>应用程序为一些用户存储哈希。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "es: miles de millones",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>billions of guesses</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T es</title></head><body><main><p>Filler zz es.</p><p>miles de millones de intentos</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "es: over",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Up to 64 characters.</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T es</title></head><body><main><p>Filler zz es.</p><p>Hasta 64 caracteres.</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "must also not -> também devem",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must also not share passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários também devem compartilhar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must also not share passwords"
+  ],
+  "tr_claims": [
+   "Os usuários também devem compartilhar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "must also not natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must also not share passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários também não devem compartilhar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must also not share passwords"
+  ],
+  "tr_claims": [
+   "Os usuários também não devem compartilhar senhas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "should generally not -> deveriam",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Sites should generally not expire passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os sites deveriam em geral expirar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Sites should generally not expire passwords"
+  ],
+  "tr_claims": [
+   "Os sites deveriam em geral expirar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "rel clause natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users who do not have a manager must write it down [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Usuários que não têm gerenciador devem anotá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users who do not have a manager must write it down"
+  ],
+  "tr_claims": [
+   "Usuários que não têm gerenciador devem anotá-la"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "rel clause flip",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Passwords that are not unique must be changed [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Senhas que são únicas não devem ser trocadas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords that are not unique must be changed"
+  ],
+  "tr_claims": [
+   "Senhas que são únicas não devem ser trocadas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "Deve-se natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A long password must be used [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Deve-se usar uma senha longa [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A long password must be used"
+  ],
+  "tr_claims": [
+   "Deve-se usar uma senha longa"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "prohibited natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Sharing passwords is prohibited [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>É proibido compartilhar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Sharing passwords is prohibited"
+  ],
+  "tr_claims": [
+   "É proibido compartilhar senhas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "not allowed -> permitido",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Sharing passwords is not allowed [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>É permitido compartilhar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Sharing passwords is not allowed"
+  ],
+  "tr_claims": [
+   "É permitido compartilhar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "in no case -> devem",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Passwords must in no case be shared [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>As senhas devem em todo caso ser compartilhadas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must in no case be shared"
+  ],
+  "tr_claims": [
+   "As senhas devem em todo caso ser compartilhadas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "we must natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>We must rotate keys [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Devemos trocar as chaves [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "We must rotate keys"
+  ],
+  "tr_claims": [
+   "Devemos trocar as chaves"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "null form skipped negation",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A site may ask for a symbol that will be required later [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Um site pode pedir um símbolo depois não vai ser exigido [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A site may ask for a symbol that will be required later"
+  ],
+  "tr_claims": [
+   "Um site pode pedir um símbolo depois não vai ser exigido"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "ctl: prefix negation, empty en remainder",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Não é verdade que o usuário deve usar 15 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The user must use 15 characters"
+  ],
+  "tr_claims": [
+   "o usuário deve usar 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "en remainder 'However' licenses tr prefix",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>However, the user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Não é verdade que o usuário deve usar 15 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "the user must use 15 characters"
+  ],
+  "tr_claims": [
+   "o usuário deve usar 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "en remainder licenses negator next to claim",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>However, the user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Porém, o usuário não deve usar 15 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "the user must use 15 characters"
+  ],
+  "tr_claims": [
+   "deve usar 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "en remainder licenses suffix",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST says the user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O usuário deve usar 15 caracteres, o que é falso segundo o NIST [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "the user must use 15 characters"
+  ],
+  "tr_claims": [
+   "O usuário deve usar 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "added sentence in same block",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O usuário deve usar 15 caracteres [1]. Isso é falso.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The user must use 15 characters"
+  ],
+  "tr_claims": [
+   "O usuário deve usar 15 caracteres"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "second occurrence of marker",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The user must use long words [1].</p><p>See also [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O usuário deve usar palavras longas [1].</p><p>O usuário nunca deve usar palavras longas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The user must use long words"
+  ],
+  "tr_claims": [
+   "O usuário deve usar palavras longas"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "substring mid-word",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Hashes are fast [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os hashes não são rápidos [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Hashes are fast"
+  ],
+  "tr_claims": [
+   "são rápidos"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "FFF9 hides added text",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>￹Não é verdade que￻ o usuário deve usar 15 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The user must use 15 characters"
+  ],
+  "tr_claims": [
+   "o usuário deve usar 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "FFF9 charref hides added text",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>&#xFFF9;Não é verdade que&#xFFFB; o usuário deve usar 15 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The user must use 15 characters"
+  ],
+  "tr_claims": [
+   "o usuário deve usar 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "E000 hides added number",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 900 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "E000 hides changed number, attr carries the old",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p><span title=\"5\">Leva</span> 9 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "E000 charref",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva &#xE000;900&#xE001; dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "E000 unterminated eats block",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days and 3 hours.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias e 7 horas.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "E000 hides marker",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Text.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Texto [7].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "CODE_BRACKET literal",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Text.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Texto ⟦7].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "fullwidth marker",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Text [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Texto [１].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Text"
+  ],
+  "tr_claims": [
+   "Texto"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "null form: that-less en vs que pt (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A site may say a symbol will be required [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Um site pode dizer que um símbolo vai ser exigido [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A site may say a symbol will be required"
+  ],
+  "tr_claims": [
+   "Um site pode dizer que um símbolo vai ser exigido"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "null form: negation hidden",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A site may say a symbol will be required [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Um site pode dizer aos usuários: um símbolo não vai ser exigido [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A site may say a symbol will be required"
+  ],
+  "tr_claims": [
+   "Um site pode dizer aos usuários: um símbolo não vai ser exigido"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "null form: same clause flip",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A symbol may be required [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Um símbolo pode não ser exigido [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A symbol may be required"
+  ],
+  "tr_claims": [
+   "Um símbolo pode não ser exigido"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "ld text array",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"description\":[\"cracked in 5 days\"]}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json\">{\"description\":[\"quebrada em 9 dias\"]}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ld @value object",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"description\":{\"@value\":\"cracked in 5 days\"}}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json\">{\"description\":{\"@value\":\"quebrada em 9 dias\"}}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ld articleBody",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"articleBody\":\"cracked in 5 days\"}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json\">{\"articleBody\":\"quebrada em 9 dias\"}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ld keywords/about",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"keywords\":\"5 days\",\"about\":\"x\"}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json\">{\"keywords\":\"9 dias\",\"about\":\"y\"}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ld numeric field",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"wordCount\":5,\"timeRequired\":\"PT5M\"}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json\">{\"wordCount\":9,\"timeRequired\":\"PT9M\"}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ld type attr with charset",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json; charset=utf-8\">{\"description\":\"5 days\"}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json; charset=utf-8\">{\"description\":\"9 dias\"}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ld type uppercase/space",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\" application/ld+json \">{\"description\":\"5 days\"}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\" application/ld+json \">{\"description\":\"9 dias\"}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "ld in body dup",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"description\":\"5 days\"}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json\">{\"description\":\"5 dias\"}</script></head><body><main><p>Filler zz pt.</p><script type=\"application/ld+json\">{\"description\":\"9 dias\"}</script></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "structure"
+ },
+ {
+  "name": "ld modal change",
+  "en": "<html lang=\"en\"><head><title>T en</title><script type=\"application/ld+json\">{\"description\":\"You must rotate\"}</script></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><script type=\"application/ld+json\">{\"description\":\"Você não deve trocar\"}</script></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "meta keywords",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta name=\"keywords\" content=\"5 days\"></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta name=\"keywords\" content=\"9 dias\"></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "meta itemprop description",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta itemprop=\"description\" content=\"5 days\"></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta itemprop=\"description\" content=\"9 dias\"></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "meta description in body (tr)",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta name=\"description\" content=\"5 days\"></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta name=\"description\" content=\"5 dias\"></head><body><main><p>Filler zz pt.</p><meta name=\"description\" content=\"9 dias\"></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "meta name with space",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta name=\"description\" content=\"5 days\"></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta name=\"description \" content=\"9 dias\"><meta name=\"description\" content=\"5 dias\"></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "title in body svg",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>x</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>x <svg><title>9 dias</title></svg></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "base href",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p><a href=\"/a\">a</a></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><base href=\"https://evil.example/\"></head><body><main><p>Filler zz pt.</p><p><a href=\"/a\">a</a></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "meta refresh",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta http-equiv=\"refresh\" content=\"0;url=https://evil.example/\"></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "link outside main changed",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p></main><p><a href=\"https://evil.example/\">mais</a></p></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "structure"
+ },
+ {
+  "name": "form action / area href",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><form action=\"/a\"><button formaction=\"/b\">Go</button></form></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><form action=\"https://evil.example/\"><button formaction=\"/c\">Ir</button></form></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "a href whitespace/case",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p><a href=\"https://a.example/x\">a</a></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p><a href=\"https://a.example/pt/x\">a</a></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "own host via tr og:url",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p><a href=\"https://a.example/login\">a</a></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta property=\"og:url\" content=\"https://a.example/pt/z\"></head><body><main><p>Filler zz pt.</p><p><a href=\"https://a.example/pt/login\">a</a></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "srcset / style bg / svg image",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><svg><image href=\"/a.png\"/></svg><p style=\"background:url(/a.png)\">x</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><svg><image href=\"/b.png\"/></svg><p style=\"background:url(/b.png)\">x</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "textarea hides markup",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><textarea></textarea><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><textarea></textarea><p>5 dias</p><textarea><p>9 dias</p></textarea></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "noscript added",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><noscript>Leva 9 dias</noscript></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "template hidden numbers (ctl)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><template><p>5 dias</p></template><p>dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "details/summary added text",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><div>x</div></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><div>x e mais texto sem numero que muda o sentido</div></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "data attr / content css",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p data-n=\"5\">x</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p data-n=\"9\">x</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "input value hidden type",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><input type=\"hidden\" value=\"5\"></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><input type=\"hidden\" value=\"9\"></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "img alt modal/number ctl",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><img src=\"a\" alt=\"5 days\"></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><img src=\"a\" alt=\"9 dias\"></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "aria-description/label attr",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p aria-description=\"5 days\">x</p><abbr data-title=\"5\">y</abbr><time datetime=\"2026-09-17\">z</time></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p aria-description=\"9 dias\">x</p><abbr data-title=\"9\">y</abbr><time datetime=\"2020-01-01\">z</time></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "html lang second html tag",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><html lang=\"en\"><head><title>T xx</title></head><body><main><p>Filler zz xx.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "comment hides (ctl)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>5 dias<!-- 9 --></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "cdata section",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>dias <![CDATA[ 9 ]]></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "processing instruction",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>dias <?xml 9 > 9 anos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "short php tag",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>dias <? echo 9; ?> anos</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "php before main sets var",
+  "en": "<?php $n = 5; ?><html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p><?= $n ?> days</p></main></body></html>",
+  "tr": "<?php $n = 9; ?><html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p><?= $n ?> dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "php in head title",
+  "en": "<html lang=\"en\"><head><title><?= t('5 days') ?></title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title><?= t('9 dias') ?></title></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "script comment-like",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><script><!-- <script> </script><p>9 dias</p><script>--></script><p>5 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "structure"
+ },
+ {
+  "name": "unclosed attr quote",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>5 dias</p><a title=\"x>9 dias</a></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true,
+  "either": true,
+  "note": "html.parser versions disagree on malformed markup; 3.9 blocks, 3.15 passes"
+ },
+ {
+  "name": "nested main in skip",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><aside data-i18n-skip>nota</aside></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "skip text long no numbers",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><aside data-i18n-skip>Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. Este artigo foi refutado pelos autores e retirado. </aside></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "skip: number words not in list",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><aside data-i18n-skip>Leva metade de um dia; é proibido usar; convém trocar sempre; nunca reutilize.</aside></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "skip"
+ },
+ {
+  "name": "stray </p> in skip ends skip?",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p><aside data-i18n-skip>nota</p> texto fora</aside></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "structure"
+ },
+ {
+  "name": "plaintext/xmp",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>5 dias</p><xmp><p>9 dias</p></xmp></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "iframe content",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>5 dias</p><iframe><p>9 dias</p></iframe></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "select/option",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>5 dias</p><title>9 dias</title></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "entity without semicolon",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>5 dias &#57 &num9</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "bidi/zero-width in number",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>15 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>1​5 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "soft hyphen in modal",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>x</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>x</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "zero-width hides added number",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>5 days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>5​0 dias</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "roman/ordinal sup",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>10<sup>12</sup></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>10<sup>12</sup></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "sub digits",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>H<sub>2</sub>O 5</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>H₂O 5</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "circled digits",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>step 1</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>passo ①</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "circled digits added",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>days</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>⑨ dias, Ⅸ anos, ９ ok</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "de may not -> dürfen nicht (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users may not share passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Nutzer dürfen Passwörter nicht weitergeben [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users may not share passwords"
+  ],
+  "tr_claims": [
+   "Nutzer dürfen Passwörter nicht weitergeben"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de vor allem (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>This mainly affects 5 large sites [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Das betrifft vor allem 5 große Websites [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "This mainly affects 5 large sites"
+  ],
+  "tr_claims": [
+   "Das betrifft vor allem 5 große Websites"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "de über (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes over 5 years [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Es dauert über 5 Jahre [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "It takes over 5 years"
+  ],
+  "tr_claims": [
+   "Es dauert über 5 Jahre"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "de und-less: muss ... kein",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The password must be long and contain a symbol [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Das Passwort muss lang sein und ein Symbol enthalten [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "The password must be long and contain a symbol"
+  ],
+  "tr_claims": [
+   "Das Passwort muss lang sein und ein Symbol enthalten"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "de must + nicht in infinitive clause",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must make sure not to reuse passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Nutzer müssen darauf achten, Passwörter nicht wiederzuverwenden [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users must make sure not to reuse passwords"
+  ],
+  "tr_claims": [
+   "Nutzer müssen darauf achten, Passwörter nicht wiederzuverwenden"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de must + adjective nicht",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must replace passwords that are not unique [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Nutzer müssen nicht eindeutige Passwörter ersetzen [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users must replace passwords that are not unique"
+  ],
+  "tr_claims": [
+   "Nutzer müssen nicht eindeutige Passwörter ersetzen"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de can flip via ohne",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users can log in with a password [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Nutzer können sich ohne Passwort kaum anmelden [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users can log in with a password"
+  ],
+  "tr_claims": [
+   "Nutzer können sich ohne Passwort kaum anmelden"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "de must -> ist zu",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The password must be changed [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Das Passwort ist zu ändern [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "The password must be changed"
+  ],
+  "tr_claims": [
+   "Das Passwort ist zu ändern"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de must not -> verboten",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Passwords must not be shared [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Die Weitergabe von Passwörtern ist verboten [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Passwords must not be shared"
+  ],
+  "tr_claims": [
+   "Die Weitergabe von Passwörtern ist verboten"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "de should -> sollten natural",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users should use a manager [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Nutzer sollten einen Manager verwenden [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Users should use a manager"
+  ],
+  "tr_claims": [
+   "Nutzer sollten einen Manager verwenden"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "zh irreversible (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A hash is irreversible [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>哈希是不可逆的 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "A hash is irreversible"
+  ],
+  "tr_claims": [
+   "哈希是不可逆的"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "zh likely (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It is likely to be cracked [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>它很可能被破解 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "It is likely to be cracked"
+  ],
+  "tr_claims": [
+   "它很可能被破解"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "zh impossible (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Guessing it is impossible [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>猜中它是不可能的 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Guessing it is impossible"
+  ],
+  "tr_claims": [
+   "猜中它是不可能的"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh advice noun (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST's advice changed [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>NIST的建议变了 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "NIST's advice changed"
+  ],
+  "tr_claims": [
+   "NIST的建议变了"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh able to (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>An attacker is able to try them all [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>攻击者能够全部尝试 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "An attacker is able to try them all"
+  ],
+  "tr_claims": [
+   "攻击者能够全部尝试"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "zh billions of (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes billions of years [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>这需要数十亿年 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "It takes billions of years"
+  ],
+  "tr_claims": [
+   "这需要数十亿年"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 不必",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户不必更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "用户不必更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 必须不",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户必须不更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "用户必须不更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 不是必须... ",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户并不必须更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "用户并不必须更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 未必须",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户未必须要更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "用户未必须要更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh should -> 不太应该",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users should rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户不太应该更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users should rotate passwords"
+  ],
+  "tr_claims": [
+   "用户不太应该更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh can -> 不太可以/不一定可以",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users can rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户不一定可以更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users can rotate passwords"
+  ],
+  "tr_claims": [
+   "用户不一定可以更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh can -> 很难",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users can rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户不被允许更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users can rotate passwords"
+  ],
+  "tr_claims": [
+   "用户不被允许更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 不许",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must share passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户不许共享密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must share passwords"
+  ],
+  "tr_claims": [
+   "用户不许共享密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 别/勿/切勿",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must share passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户切勿共享密码，必须 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must share passwords"
+  ],
+  "tr_claims": [
+   "用户切勿共享密码，必须"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 不需",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户不需更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "用户不需更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 无需要",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>用户毋须更换密码 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "用户毋须更换密码"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "es until (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Supported until 2025 [1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T es</title></head><body><main><p>Filler zz es.</p><p>Compatible hasta 2025 [1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "Supported until 2025"
+  ],
+  "tr_claims": [
+   "Compatible hasta 2025"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "es must -> no debe nunca",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must also not share [1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T es</title></head><body><main><p>Filler zz es.</p><p>Los usuarios también deben compartir [1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "Users must also not share"
+  ],
+  "tr_claims": [
+   "Los usuarios también deben compartir"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "es hay que no",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must share [1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T es</title></head><body><main><p>Filler zz es.</p><p>Los usuarios deben en ningún caso compartir [1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "Users must share"
+  ],
+  "tr_claims": [
+   "Los usuarios deben en ningún caso compartir"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt must -> em hipótese alguma",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must share passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários devem em hipótese alguma compartilhar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must share passwords"
+  ],
+  "tr_claims": [
+   "Os usuários devem em hipótese alguma compartilhar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt must -> deixar de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários devem deixar de trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários devem deixar de trocar senhas"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt must -> evitar",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários devem evitar trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários devem evitar trocar senhas"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt can -> mal pode / dificilmente",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users can rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários mal podem trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users can rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários mal podem trocar senhas"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt must -> só não deve",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários sequer devem trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários sequer devem trocar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt requires -> dispensa",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The site requires a symbol [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O site dispensa um símbolo [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The site requires a symbol"
+  ],
+  "tr_claims": [
+   "O site dispensa um símbolo"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt should -> devem (ctl)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users should rotate [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários devem trocar [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users should rotate"
+  ],
+  "tr_claims": [
+   "Os usuários devem trocar"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt must -> deveriam (ctl)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários deveriam trocar [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must rotate"
+  ],
+  "tr_claims": [
+   "Os usuários deveriam trocar"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt must -> tem permissão",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários talvez queiram trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users must rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários talvez queiram trocar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt can't -> podem",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users can't rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários podem trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users can't rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários podem trocar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt cant typo",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users won't need to rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários precisam trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users won't need to rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários precisam trocar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt unable to -> conseguem",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Users are unable to rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os usuários conseguem trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Users are unable to rotate passwords"
+  ],
+  "tr_claims": [
+   "Os usuários conseguem trocar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt able to natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Attackers are able to try every password [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os atacantes conseguem testar todas as senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Attackers are able to try every password"
+  ],
+  "tr_claims": [
+   "Os atacantes conseguem testar todas as senhas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt managed to natural (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>One person managed to show it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Uma pessoa conseguiu demonstrar isso [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "One person managed to show it"
+  ],
+  "tr_claims": [
+   "Uma pessoa conseguiu demonstrar isso"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt possible natural",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It is possible to crack it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>É possível quebrá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "It is possible to crack it"
+  ],
+  "tr_claims": [
+   "É possível quebrá-la"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt can -> é possível",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>You can crack it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>É possível quebrá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "You can crack it"
+  ],
+  "tr_claims": [
+   "É possível quebrá-la"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt need noun/necessário",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>There is a need for long passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Há necessidade de senhas longas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "There is a need for long passwords"
+  ],
+  "tr_claims": [
+   "Há necessidade de senhas longas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt necessary natural",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A long password is necessary [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Uma senha longa é necessária [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A long password is necessary"
+  ],
+  "tr_claims": [
+   "Uma senha longa é necessária"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt needed natural",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>A long password is needed [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>É necessária uma senha longa [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "A long password is needed"
+  ],
+  "tr_claims": [
+   "É necessária uma senha longa"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt requirement noun",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The requirement is old [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>A exigência é antiga [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The requirement is old"
+  ],
+  "tr_claims": [
+   "A exigência é antiga"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt requirement noun 2",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The requirements are old [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os requisitos são antigos [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The requirements are old"
+  ],
+  "tr_claims": [
+   "Os requisitos são antigos"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt recommendation noun",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The recommendation is old [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>A recomendação é antiga [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The recommendation is old"
+  ],
+  "tr_claims": [
+   "A recomendação é antiga"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt might natural",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It might take years [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Talvez leve anos [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "It might take years"
+  ],
+  "tr_claims": [
+   "Talvez leve anos"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt could natural",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It could take years [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Pode levar anos [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "It could take years"
+  ],
+  "tr_claims": [
+   "Pode levar anos"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt will have to",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>You will have to change it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Você terá que trocá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "You will have to change it"
+  ],
+  "tr_claims": [
+   "Você terá que trocá-la"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt had to",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>They had to change it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Eles tiveram que trocá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "They had to change it"
+  ],
+  "tr_claims": [
+   "Eles tiveram que trocá-la"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt needed to",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>They needed to change it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Eles precisaram trocá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "They needed to change it"
+  ],
+  "tr_claims": [
+   "Eles precisaram trocá-la"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt must have been",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It must have been leaked [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Ela deve ter vazado [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "It must have been leaked"
+  ],
+  "tr_claims": [
+   "Ela deve ter vazado"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt should -> convém",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>You should change it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Convém trocá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "You should change it"
+  ],
+  "tr_claims": [
+   "Convém trocá-la"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt shouldn't (curly)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>You shouldn’t change it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Você não deveria trocá-la [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "You shouldn’t change it"
+  ],
+  "tr_claims": [
+   "Você não deveria trocá-la"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "pt needs to -> é preciso que",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The site needs to hash it [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>É preciso que o site faça o hash [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "The site needs to hash it"
+  ],
+  "tr_claims": [
+   "É preciso que o site faça o hash"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "de date '17. September' in claim (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>On 17 September 2026 it returned these counts [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Am 17. September 2026 lieferte es diese Zahlen [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "On 17 September 2026 it returned these counts"
+  ],
+  "tr_claims": [
+   "Am 17. September 2026 lieferte es diese Zahlen"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "de z. B. in claim (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use for example three random words [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Verwenden Sie z. B. drei zufällige Wörter [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "Use for example three random words"
+  ],
+  "tr_claims": [
+   "Verwenden Sie z. B. drei zufällige Wörter"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "de ca. (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes about 5 years [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Es dauert ca. 5 Jahre [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "It takes about 5 years"
+  ],
+  "tr_claims": [
+   "Es dauert ca. 5 Jahre"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt p. ex. (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use for example three random words [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use, p. ex. três palavras aleatórias [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Use for example three random words"
+  ],
+  "tr_claims": [
+   "Use, p. ex. três palavras aleatórias"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt etc. mid (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Symbols, digits and so on are optional extras here [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Símbolos, dígitos etc. são extras opcionais aqui [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Symbols, digits and so on are optional extras here"
+  ],
+  "tr_claims": [
+   "Símbolos, dígitos etc. são extras opcionais aqui"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "es EE. UU. (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>The US agency NIST says so [1].</p></main></body></html>",
+  "tr": "<html lang=\"es\"><head><title>T es</title></head><body><main><p>Filler zz es.</p><p>La agencia de EE. UU. NIST lo dice [1].</p></main></body></html>",
+  "lang": "es",
+  "en_claims": [
+   "The US agency NIST says so"
+  ],
+  "tr_claims": [
+   "La agencia de EE. UU. NIST lo dice"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "en abbreviation licenses tr remainder",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>In the U.S. the user must use 15 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Nos EUA o usuário não deve usar 15 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "the user must use 15 characters"
+  ],
+  "tr_claims": [
+   "deve usar 15 caracteres"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "pt quote then period order",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST says \"use long passwords.\" [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O NIST diz \"use senhas longas\". [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST says \"use long passwords.\""
+  ],
+  "tr_claims": [
+   "O NIST diz \"use senhas longas\"."
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "en '.\" [1] Next' vs pt '\". [1] Next'",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST says \"use long ones.\" [1] Symbols are extra.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O NIST diz \"use as longas\". [1] Símbolos são um extra.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST says \"use long ones.\""
+  ],
+  "tr_claims": [
+   "O NIST diz \"use as longas\"."
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "en '\". [1] Next' vs pt '.\" [1] Next' (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST says \"use long ones\". [1] Symbols are extra.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O NIST diz \"use as longas.\" [1] Símbolos são um extra.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST says \"use long ones\""
+  ],
+  "tr_claims": [
+   "O NIST diz \"use as longas.\""
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "zh full stop inside",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST says use long ones [1]. Symbols are extra.</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>NIST说使用长密码[1]。符号是额外的。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "NIST says use long ones"
+  ],
+  "tr_claims": [
+   "NIST说使用长密码"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "zh latin period no space (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST says use long ones [1]. Symbols are extra.</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>NIST说使用长密码[1].符号是额外的.</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "NIST says use long ones"
+  ],
+  "tr_claims": [
+   "NIST说使用长密码"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "pt colon list: marker mid sentence",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NIST says: use long ones [1], and skip symbols [2].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O NIST diz: use as longas [1], e nunca pule símbolos [2].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST says: use long ones",
+   "skip symbols"
+  ],
+  "tr_claims": [
+   "O NIST diz: use as longas",
+   "pule símbolos"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "dup attr alt: first wins in browser",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><img src=\"a\" alt=\"5 days\"></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><img src=\"a\" alt=\"9 dias\" alt=\"5 dias\"></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "dup attr href",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p><a href=\"/x\">a</a></p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p><a href=\"https://evil.example/\" href=\"/x\">a</a></p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "dup attr src",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><img src=\"/a.png\"></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><img src=\"/evil.png\" src=\"/a.png\"></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "dup attr meta content",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta name=\"description\" content=\"5 days\"></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta name=\"description\" content=\"9 dias\" content=\"5 dias\"></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "dup attr og:image",
+  "en": "<html lang=\"en\"><head><title>T en</title><meta property=\"og:image\" content=\"/a.png\"></head><body><main><p>Filler zz en.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><meta property=\"og:image\" content=\"/evil.png\" content=\"/a.png\"></head><body><main><p>Filler zz pt.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "dup attr skip (first has none)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><p class=\"x\" data-i18n-skip>fora</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "skip"
+ },
+ {
+  "name": "script end tag with attr",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><script>var a;</script x>Na verdade leva 9 dias.<script></script></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "script end tag with slash",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><script>var a;</script/>Na verdade leva 9 dias.<script></script></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "style end tag with attr",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><style>a{}</style x>Na verdade leva 9 dias.<style></style></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "CDATA with > inside",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><![CDATA[ > Na verdade leva 9 dias ]]></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "textarea comment",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><textarea><!-- Na verdade leva 9 dias --></textarea></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "textarea script",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><textarea><script>Na verdade leva 9 dias</script></textarea></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "xmp comment",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><xmp><!-- Na verdade leva 9 dias --></xmp></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "title-in-body comment",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><svg></svg><title><!-- 9 dias --></title></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "plaintext comment",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><plaintext><!-- Na verdade leva 9 dias --></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "comment --!> inside script (normalised away)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p><script>a --!> b</script></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><script>a --!> b</script></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "comment <!--> then --> later",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><!--> Na verdade leva 9 dias --></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "comment <!---> then -->",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><!---> Na verdade leva 9 dias --></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "comment ends --!> then text -->",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><!-- x --!> Na verdade leva 9 dias --></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "comment <!-- x -- > y -->",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><!-- x --> 9 dias <!-- --></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "nested comment <!-- <!-- --> x -->",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><!-- <!-- --> Na verdade leva 9 dias --></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "php-stripped comment splice",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><!-<?php ?>- Na verdade leva 9 dias --></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "php-stripped tag splice",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><scr<?php ?>ipt>Na verdade leva 9 dias</script></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "php-stripped string contains ?>",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><?php echo '?>'; ?> Na verdade leva 9 dias <?php ?></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "php // comment with ?>",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><?php // x ?> Na verdade leva 9 dias</main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "unclosed php hides tail",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><?php /* ?> */ ?> x</main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "html in php heredoc not ended by ?>",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p><?php echo 1 ?></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p><?php echo 1 ?></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "head unclosed (valid html) FB?",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "no </head> both",
+  "en": "<html lang=\"en\"><head><title>T en</title><body><main><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><body><main><p>Leva 5 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "no </head> both, number changed",
+  "en": "<html lang=\"en\"><head><title>T en</title><body><main><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title><body><main><p>Leva 9 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "no <head> tag at all, title number changed",
+  "en": "<html lang=\"en\"><title>5 days</title><body><main><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><title>9 dias</title><body><main><p>Leva 5 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "no <head> tag: meta description changed",
+  "en": "<html lang=\"en\"><title>T</title><meta name=\"description\" content=\"5 days\"><body><main><p>It takes 5 days.</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><title>Tp</title><meta name=\"description\" content=\"9 dias\"><body><main><p>Leva 5 dias.</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "HEAD uppercase",
+  "en": "<HTML lang=\"en\"><HEAD><TITLE>5 days</TITLE></HEAD><BODY><MAIN><P>It takes 5 days.</P></MAIN></BODY></HTML>",
+  "tr": "<HTML lang=\"pt\"><HEAD><TITLE>9 dias</TITLE></HEAD><BODY><MAIN><P>Leva 5 dias.</P></MAIN></BODY></HTML>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "in may modal (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Signing in may require a second code [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Entrar pode exigir um segundo código [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Signing in may require a second code"
+  ],
+  "tr_claims": [
+   "Entrar pode exigir um segundo código"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "in may modal -> must (FP?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Signing in may require a second code in May [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Entrar em maio dispensa um segundo código [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Signing in may require a second code in May"
+  ],
+  "tr_claims": [
+   "Entrar em maio dispensa um segundo código"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "that-less: does not mean users must (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>This does not mean users must rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Isso não significa que os usuários devem trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "This does not mean users must rotate passwords"
+  ],
+  "tr_claims": [
+   "Isso não significa que os usuários devem trocar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "that-less: I do not think users should (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>We do not think users should rotate passwords [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Não achamos que os usuários deveriam trocar senhas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "We do not think users should rotate passwords"
+  ],
+  "tr_claims": [
+   "Não achamos que os usuários deveriam trocar senhas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh day-month (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>On 17 September it returned these counts [1].</p></main></body></html>",
+  "tr": "<html lang=\"zh-Hans\"><head><title>T zh-Hans</title></head><body><main><p>Filler zz zh-Hans.</p><p>9月17日它返回了这些计数 [1]。</p></main></body></html>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "On 17 September it returned these counts"
+  ],
+  "tr_claims": [
+   "9月17日它返回了这些计数"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt 5 min (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 min to crack [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva 5 min para quebrar [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "It takes 5 min to crack"
+  ],
+  "tr_claims": [
+   "Leva 5 min para quebrar"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "de 5 Min. ",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes 5 min to crack [1].</p></main></body></html>",
+  "tr": "<html lang=\"de\"><head><title>T de</title></head><body><main><p>Filler zz de.</p><p>Es dauert 5 Min. zum Knacken [1].</p></main></body></html>",
+  "lang": "de",
+  "en_claims": [
+   "It takes 5 min to crack"
+  ],
+  "tr_claims": [
+   "Es dauert 5 Min. zum Knacken"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "quoted English kept",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>NCSC calls it three random words [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>O NCSC chama isso de three random words [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "NCSC calls it three random words"
+  ],
+  "tr_claims": [
+   "O NCSC chama isso de three random words"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "empty model check n/a",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>x y z w v u [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>a b c d e f [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "x y z w v u"
+  ],
+  "tr_claims": [
+   "a b c d e f"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "ctl real 15",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Passwords used on their own \"SHALL\" be \"a minimum of 15 characters in length\" [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Senhas usadas sozinhas \"DEVEM\" ter \"no mínimo 15 caracteres\" [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords used on their own \"SHALL\" be \"a minimum of 15 characters in length\""
+  ],
+  "tr_claims": [
+   "Senhas usadas sozinhas \"DEVEM\" ter \"no mínimo 15 caracteres\""
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "real 15 min->max",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Passwords used on their own \"SHALL\" be \"a minimum of 15 characters in length\" [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Senhas usadas sozinhas \"DEVEM\" ter \"no máximo 15 caracteres\" [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords used on their own \"SHALL\" be \"a minimum of 15 characters in length\""
+  ],
+  "tr_claims": [
+   "Senhas usadas sozinhas \"DEVEM\" ter \"no máximo 15 caracteres\""
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "real 25 before->desde",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Tenants created before 2021 also default to a 90-day password expiry [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os locatários criados desde 2021 também têm, por padrão, expiração de senha de 90 dias [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Tenants created before 2021 also default to a 90-day password expiry"
+  ],
+  "tr_claims": [
+   "Os locatários criados desde 2021 também têm, por padrão, expiração de senha de 90 dias"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "real 25 before->a partir de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Tenants created before 2021 also default to a 90-day password expiry [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os locatários criados a partir de 2021 também têm, por padrão, expiração de senha de 90 dias [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Tenants created before 2021 also default to a 90-day password expiry"
+  ],
+  "tr_claims": [
+   "Os locatários criados a partir de 2021 também têm, por padrão, expiração de senha de 90 dias"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "real 25 before->até",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Tenants created before 2021 also default to a 90-day password expiry [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Os locatários criados até 2021 também têm, por padrão, expiração de senha de 90 dias [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Tenants created before 2021 also default to a 90-day password expiry"
+  ],
+  "tr_claims": [
+   "Os locatários criados até 2021 também têm, por padrão, expiração de senha de 90 dias"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "real 13 or more -> ou superior (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>OWASP says to use a work factor of 10 or more [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>A OWASP diz para usar um fator de trabalho de 10 ou superior [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "OWASP says to use a work factor of 10 or more"
+  ],
+  "tr_claims": [
+   "A OWASP diz para usar um fator de trabalho de 10 ou superior"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "real 13 or more -> igual ou superior a 10 (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>OWASP says to use a work factor of 10 or more [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>A OWASP diz para usar um fator de trabalho igual ou superior a 10 [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "OWASP says to use a work factor of 10 or more"
+  ],
+  "tr_claims": [
+   "A OWASP diz para usar um fator de trabalho igual ou superior a 10"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "at least -> ao menos (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use at least 8 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use ao menos 8 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Use at least 8 characters"
+  ],
+  "tr_claims": [
+   "Use ao menos 8 caracteres"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "at least -> 8 ou mais natural",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Use at least 8 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Use 8 caracteres ou mais [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Use at least 8 characters"
+  ],
+  "tr_claims": [
+   "Use 8 caracteres ou mais"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "up to -> de até",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Passwords of up to 64 characters [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Senhas de até 64 caracteres [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords of up to 64 characters"
+  ],
+  "tr_claims": [
+   "Senhas de até 64 caracteres"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "more than -> superior a (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>More than 5 attempts [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Um número superior a 5 tentativas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "More than 5 attempts"
+  ],
+  "tr_claims": [
+   "Um número superior a 5 tentativas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "less than -> inferior a (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>In less than 5 minutes [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Em tempo inferior a 5 minutos [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "In less than 5 minutes"
+  ],
+  "tr_claims": [
+   "Em tempo inferior a 5 minutos"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "less than -> em menos de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>In less than 5 minutes [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Em menos de 5 minutos [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "In less than 5 minutes"
+  ],
+  "tr_claims": [
+   "Em menos de 5 minutos"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "after -> a partir de",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>After 5 failed attempts the account locks [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>A partir de 5 tentativas falhas a conta é bloqueada [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "After 5 failed attempts the account locks"
+  ],
+  "tr_claims": [
+   "A partir de 5 tentativas falhas a conta é bloqueada"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "before -> antes das 5",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Finish before 5 pm [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Termine antes das 17 h [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Finish before 5 pm"
+  ],
+  "tr_claims": [
+   "Termine antes das 17 h"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "at most -> quando muito",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>It takes at most 3 days [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Leva quando muito 3 dias [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "It takes at most 3 days"
+  ],
+  "tr_claims": [
+   "Leva quando muito 3 dias"
+  ],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "as few as (unlisted both) -> até",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>In as few as 3 days [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Em apenas 3 dias [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "In as few as 3 days"
+  ],
+  "tr_claims": [
+   "Em apenas 3 dias"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ },
+ {
+  "name": "as many as -> até (FB?)",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>As many as 5 attempts [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Até 5 tentativas [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "As many as 5 attempts"
+  ],
+  "tr_claims": [
+   "Até 5 tentativas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "some 5 / roughly",
+  "en": "<html lang=\"en\"><head><title>T en</title></head><body><main><p>Filler zz en.</p><p>Roughly 5 days [1].</p></main></body></html>",
+  "tr": "<html lang=\"pt\"><head><title>T pt</title></head><body><main><p>Filler zz pt.</p><p>Cerca de 5 dias [1].</p></main></body></html>",
+  "lang": "pt",
+  "en_claims": [
+   "Roughly 5 days"
+  ],
+  "tr_claims": [
+   "Cerca de 5 dias"
+  ],
+  "expect": "pass",
+  "known_gap": true
+ }
+]

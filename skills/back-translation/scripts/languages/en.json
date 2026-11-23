@@ -1,0 +1,476 @@
+{
+ "lang": "en",
+ "name": "English (source)",
+ "word_boundaries": true,
+ "decimal": ".",
+ "group": [
+  ",",
+  " ",
+  " ",
+  " "
+ ],
+ "scale_words": {
+  "thousand": 1000.0,
+  "million": 1000000.0,
+  "billion": 1000000000.0,
+  "trillion": 1000000000000.0,
+  "quadrillion": 1000000000000000.0,
+  "quintillion": 1e+18,
+  "sextillion": 1e+21,
+  "septillion": 1e+24,
+  "octillion": 1e+27,
+  "nonillion": 1e+30,
+  "decillion": 1e+33,
+  "hundred": 100.0,
+  "hundreds": 100.0,
+  "thousands": 1000.0,
+  "millions": 1000000.0,
+  "billions": 1000000000.0,
+  "trillions": 1000000000000.0,
+  "quadrillions": 1000000000000000.0
+ },
+ "unknown_scale": "(?<![\\w-])\\w+illi(?:on|ard)s?(?![\\w-])",
+ "number_words": {
+  "zero": 0,
+  "two": 2,
+  "three": 3,
+  "four": 4,
+  "five": 5,
+  "six": 6,
+  "seven": 7,
+  "eight": 8,
+  "nine": 9,
+  "ten": 10,
+  "eleven": 11,
+  "twelve": 12,
+  "thirteen": 13,
+  "fourteen": 14,
+  "fifteen": 15,
+  "sixteen": 16,
+  "seventeen": 17,
+  "eighteen": 18,
+  "nineteen": 19,
+  "twenty": 20,
+  "thirty": 30,
+  "forty": 40,
+  "fifty": 50,
+  "sixty": 60,
+  "seventy": 70,
+  "eighty": 80,
+  "ninety": 90,
+  "both": 2,
+  "twice": 2
+ },
+ "tens": {
+  "twenty": 20,
+  "thirty": 30,
+  "forty": 40,
+  "fifty": 50,
+  "sixty": 60,
+  "seventy": 70,
+  "eighty": 80,
+  "ninety": 90
+ },
+ "compound_units": {
+  "one": 1,
+  "two": 2,
+  "three": 3,
+  "four": 4,
+  "five": 5,
+  "six": 6,
+  "seven": 7,
+  "eight": 8,
+  "nine": 9
+ },
+ "compound": [
+  "{t}-{u}",
+  "{t} {u}"
+ ],
+ "units": {
+  "second": [
+   "second",
+   "seconds",
+   "sec"
+  ],
+  "minute": [
+   "minute",
+   "minutes",
+   "min"
+  ],
+  "hour": [
+   "hour",
+   "hours"
+  ],
+  "day": [
+   "day",
+   "days"
+  ],
+  "week": [
+   "week",
+   "weeks"
+  ],
+  "month": [
+   "month",
+   "months"
+  ],
+  "year": [
+   "year",
+   "years"
+  ],
+  "character": [
+   "character",
+   "characters",
+   "char",
+   "chars"
+  ],
+  "word": [
+   "word",
+   "words"
+  ],
+  "percent": [
+   "%",
+   "percent",
+   "per cent"
+  ],
+  "millisecond": [
+   "millisecond",
+   "milliseconds",
+   "ms"
+  ],
+  "decade": [
+   "decade",
+   "decades"
+  ],
+  "century": [
+   "century",
+   "centuries"
+  ],
+  "kilobyte": [
+   "KB",
+   "kB",
+   "kilobyte",
+   "kilobytes"
+  ],
+  "megabyte": [
+   "MB",
+   "megabyte",
+   "megabytes"
+  ],
+  "gigabyte": [
+   "GB",
+   "gigabyte",
+   "gigabytes"
+  ],
+  "terabyte": [
+   "TB",
+   "terabyte",
+   "terabytes"
+  ],
+  "bit": [
+   "bit",
+   "bits"
+  ],
+  "byte": [
+   "byte",
+   "bytes"
+  ]
+ },
+ "normative": [
+  {
+   "kind": null,
+   "bare": "must",
+   "negated": "need-not",
+   "forms": [
+    "be required",
+    "be mandatory",
+    "been required",
+    "being required"
+   ]
+  },
+  {
+   "kind": null,
+   "bare": "should",
+   "negated": "should-not",
+   "forms": [
+    "be recommended",
+    "been recommended"
+   ]
+  },
+  {
+   "kind": "must-not",
+   "forms": [
+    "must not",
+    "mustn't",
+    "shall not",
+    "shan't"
+   ]
+  },
+  {
+   "kind": "should-not",
+   "forms": [
+    "should not",
+    "shouldn't",
+    "not recommended"
+   ]
+  },
+  {
+   "kind": "may-not",
+   "forms": [
+    "cannot",
+    "can't",
+    "can not",
+    "may not",
+    "could not",
+    "couldn't"
+   ]
+  },
+  {
+   "kind": "need-not",
+   "forms": [
+    "need not",
+    "needn't",
+    "do not need to",
+    "don't need to",
+    "does not need to",
+    "doesn't need to",
+    "do not have to",
+    "don't have to",
+    "does not have to",
+    "doesn't have to",
+    "not required",
+    "not mandatory"
+   ]
+  },
+  {
+   "kind": "must",
+   "negated": "must-not",
+   "forms": [
+    "must",
+    "shall"
+   ]
+  },
+  {
+   "kind": "must",
+   "negated": "need-not",
+   "forms": [
+    "required",
+    "require",
+    "requires",
+    "requiring",
+    "need to",
+    "needs to",
+    "need",
+    "needs",
+    "have to",
+    "has to",
+    "mandatory"
+   ]
+  },
+  {
+   "kind": "should",
+   "negated": "should-not",
+   "forms": [
+    "should",
+    "ought to",
+    "recommend",
+    "recommends",
+    "recommended"
+   ]
+  },
+  {
+   "kind": "may",
+   "negated": "may-not",
+   "forms": [
+    "can",
+    "may",
+    "could",
+    "might",
+    "optional"
+   ]
+  },
+  {
+   "kind": "may",
+   "forms": [
+    "allowed",
+    "permitted",
+    "able to",
+    "managed to"
+   ],
+   "negated": "may-not"
+  },
+  {
+   "kind": "must-not",
+   "forms": [
+    "prohibited",
+    "forbidden"
+   ]
+  }
+ ],
+ "forbidden": [],
+ "months": [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+ ],
+ "date_patterns": [
+  "\\b(?P<y>\\d{4})-(?P<m>\\d{2})-(?P<d>\\d{2})\\b",
+  "\\b(?P<d>\\d{1,2})(?:st|nd|rd|th)?\\s+(?P<m>{months})\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<m>{months})\\s+(?P<d>\\d{1,2})(?:st|nd|rd|th)?,?\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<m>{months})\\s+(?P<y>\\d{4})\\b",
+  "\\b(?P<d>\\d{1,2})(?:st|nd|rd|th)?\\s+(?P<m>{months})\\b",
+  "\\b(?P<m>{months})\\s+(?P<d>\\d{1,2})(?:st|nd|rd|th)?\\b",
+  "\\b(?i:in|from|until|by|since|during)\\s+(?P<m>{months})\\b"
+ ],
+ "notes": "The source side. can counts with may because every target language renders both with one word. Kinds are compared in order, so must then may is not may then must. Negation is read within three words before and one after a modal (does not require is need-not). one is not a number word: it is too often a pronoun. Digits stay digits in a translation: one hour against 1 hora blocks.",
+ "negators": [
+  "not",
+  "n't",
+  "no",
+  "never",
+  "nobody",
+  "no one",
+  "none",
+  "neither",
+  "nor",
+  "no longer",
+  "don't",
+  "doesn't",
+  "didn't",
+  "isn't",
+  "aren't",
+  "wasn't",
+  "weren't",
+  "won't",
+  "hasn't",
+  "haven't",
+  "nothing",
+  "wouldn't",
+  "hadn't"
+ ],
+ "negation_window": [
+  3,
+  3
+ ],
+ "negation_skip": [
+  "not only",
+  "not just",
+  "not merely",
+  "no matter",
+  "not least"
+ ],
+ "clause_breaks": [
+  "and",
+  "or",
+  "but",
+  "that",
+  "which",
+  "who",
+  "because",
+  "if",
+  "unless",
+  "when",
+  "while",
+  "whereas"
+ ],
+ "comparators": {
+  "before": {
+   "min": [
+    "at least",
+    "a minimum of",
+    "minimum of",
+    "minimum",
+    "no less than",
+    "no fewer than",
+    "not less than",
+    "not fewer than"
+   ],
+   "max": [
+    "at most",
+    "a maximum of",
+    "maximum of",
+    "maximum",
+    "up to",
+    "no more than",
+    "not more than",
+    "as many as",
+    "until",
+    "up until"
+   ],
+   "gt": [
+    "more than",
+    "greater than",
+    "longer than"
+   ],
+   "lt": [
+    "less than",
+    "fewer than",
+    "shorter than"
+   ],
+   "before": [
+    "before"
+   ],
+   "after": [
+    "after"
+   ]
+  },
+  "after": {
+   "min": [
+    "or more",
+    "or longer",
+    "or higher",
+    "or greater",
+    "or above",
+    "minimum"
+   ],
+   "max": [
+    "or less",
+    "or fewer",
+    "or lower",
+    "or shorter",
+    "maximum"
+   ]
+  },
+  "before_adjacent": {
+   "gt": [
+    "over",
+    "above"
+   ],
+   "lt": [
+    "under",
+    "below"
+   ]
+  }
+ },
+ "month_aliases": {
+  "Jan": 1,
+  "Feb": 2,
+  "Mar": 3,
+  "Apr": 4,
+  "Jun": 6,
+  "Jul": 7,
+  "Aug": 8,
+  "Sep": 9,
+  "Sept": 9,
+  "Oct": 10,
+  "Nov": 11,
+  "Dec": 12
+ },
+ "relative_words": [
+  "that",
+  "which",
+  "who",
+  "whom",
+  "whose"
+ ],
+ "relative_window": 1,
+ "dates_case_sensitive": true
+}

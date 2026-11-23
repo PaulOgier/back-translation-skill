@@ -1,0 +1,12 @@
+{
+  "name": "back-translation-skill",
+  "owner": { "name": "Paul Ogier", "url": "https://github.com/PaulOgier" },
+  "metadata": { "description": "Article translation that adds no facts, checked by back-translation and a deterministic checker." },
+  "plugins": [
+    {
+      "name": "back-translation",
+      "source": "./",
+      "description": "Translate an English article (HTML, PHP or Markdown) into another language and prove nothing was added, dropped or changed."
+    }
+  ]
+}

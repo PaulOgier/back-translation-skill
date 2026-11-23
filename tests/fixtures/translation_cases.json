@@ -1,0 +1,948 @@
+[
+ {
+  "name": "de English-style decimal adds fraction 254 -> 254.9",
+  "en": "<main><p>takes 254 days</p></main>",
+  "tr": "<main><p>dauert 254.9 Tage</p></main>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "pt 10 -> 10.5",
+  "en": "<main><p>takes 10 years</p></main>",
+  "tr": "<main><p>leva 10.5 anos</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "zh 254 -> 254,9",
+  "en": "<main><p>takes 254 days</p></main>",
+  "tr": "<main><p>需要254,9天</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "en .5 vs pt ,7 (leading separator)",
+  "en": "<main><p>about .5 seconds</p></main>",
+  "tr": "<main><p>cerca de ,7 segundos</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "version tail 1.2.3 -> 1.2.9 (zh)",
+  "en": "<main><p>version 1.2.3</p></main>",
+  "tr": "<main><p>版本 1.2.9</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "IP last octets (zh)",
+  "en": "<main><p>host 192.168.1.1</p></main>",
+  "tr": "<main><p>主机 192.168.9.7</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "TLS 1.3 kept verbatim in German (legit)",
+  "en": "<main><p>uses TLS 1.3</p></main>",
+  "tr": "<main><p>nutzt TLS 1.3</p></main>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "iOS 17.4 kept verbatim in pt (legit)",
+  "en": "<main><p>on iOS 17.4</p></main>",
+  "tr": "<main><p>no iOS 17.4</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "32-digit number last digits changed (pt)",
+  "en": "<main><p>37,157,429,083,410,091,685,945,089,785,856 combinations</p></main>",
+  "tr": "<main><p>37.157.429.083.410.091.685.945.089.781.111 combinações</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "32-digit number last digits changed (zh)",
+  "en": "<main><p>37,157,429,083,410,091,685,945,089,785,856 combinations</p></main>",
+  "tr": "<main><p>37,157,429,083,410,091,685,945,089,781,111 种</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "number words eight -> seis",
+  "en": "<main><p>eight characters</p></main>",
+  "tr": "<main><p>seis caracteres</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "unlisted scale quintillion -> quintillones (1e30)",
+  "en": "<main><p>3 quintillion years</p></main>",
+  "tr": "<main><p>3 quintillones de años</p></main>",
+  "lang": "es",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "unlisted scale quintillion -> Quintillionen (1e30)",
+  "en": "<main><p>3 quintillion years</p></main>",
+  "tr": "<main><p>3 Quintillionen Jahre</p></main>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "unit swap days -> anos",
+  "en": "<main><p>takes 254 days</p></main>",
+  "tr": "<main><p>leva 254 anos</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "swap two numbers across facts",
+  "en": "<main><p>8 characters takes 254 days, 12 characters takes 301 years</p></main>",
+  "tr": "<main><p>12 caracteres leva 254 dias, 8 caracteres leva 301 anos</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "table cells shift digits 12|34 -> 1|234",
+  "en": "<main><table><tr><td>12</td><td>34</td></tr></table></main>",
+  "tr": "<main><table><tr><td>1</td><td>234</td></tr></table></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "table cells 8|3 hours -> 83 horas one cell",
+  "en": "<main><table><tr><td>8</td><td>3 hours</td></tr></table></main>",
+  "tr": "<main><table><tr><td>83 horas</td><td></td></tr></table></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "sign change -5 -> 5",
+  "en": "<main><p>change of -5 points</p></main>",
+  "tr": "<main><p>mudança de 5 pontos</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "superscript exponent 10¹² -> 10¹⁵",
+  "en": "<main><p>10¹² guesses</p></main>",
+  "tr": "<main><p>10¹⁵ tentativas</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "sup tag exponent 10^12 -> 101^2",
+  "en": "<main><p>10<sup>12</sup> guesses</p></main>",
+  "tr": "<main><p>101<sup>2</sup> tentativas</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "es 'mil millones' with nbsp (legit)",
+  "en": "<main><p>10.7 billion years</p></main>",
+  "tr": "<main><p>10,7 mil millones de años</p></main>",
+  "lang": "es",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "es 'mil millones' line-wrapped (legit)",
+  "en": "<main><p>10.7 billion years</p></main>",
+  "tr": "<main><p>10,7 mil\n   millones de años</p></main>",
+  "lang": "es",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "de number after nbsp 'RTX&nbsp;5090' (legit)",
+  "en": "<main><p>an RTX 5090 card</p></main>",
+  "tr": "<main><p>eine RTX&nbsp;5090 Karte</p></main>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "pt 'n.º&nbsp;7' added number invisible",
+  "en": "<main><p>the rule</p></main>",
+  "tr": "<main><p>a regra n.º&nbsp;7</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "zh 1亿2000万 for 120 million (legit)",
+  "en": "<main><p>120 million</p></main>",
+  "tr": "<main><p>1亿2000万</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "zh 3千亿 for 300 billion (legit)",
+  "en": "<main><p>300 billion</p></main>",
+  "tr": "<main><p>3千亿</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "zh fullwidth digits",
+  "en": "<main><p>254 days</p></main>",
+  "tr": "<main><p>２５４天</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "bracketed number [16] -> [17] no claims",
+  "en": "<main><p>array[16] bytes</p></main>",
+  "tr": "<main><p>array[17] bytes</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "code with index identical (legit)",
+  "en": "<main><p>use <code>$a[1]</code></p></main>",
+  "tr": "<main><p>use <code>$a[1]</code></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "pt 1.5 million as '1,5 milhão' NFD",
+  "en": "<main><p>1.5 million</p></main>",
+  "tr": "<main><p>1,5 milhão</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "percent 90.1% -> 9,01%",
+  "en": "<main><p>at 90.1%</p></main>",
+  "tr": "<main><p>em 9,01%</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "de year range 2019-2021 legit",
+  "en": "<main><p>from 2019-2021</p></main>",
+  "tr": "<main><p>von 2019–2021</p></main>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "de date 17.09.2026 for 17 September 2026 (legit)",
+  "en": "<main><p>On 17 September 2026 it</p></main>",
+  "tr": "<main><p>Am 17.09.2026</p></main>",
+  "lang": "de",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "no <main> on either page, zero claims",
+  "en": "<body><p>takes 254 days</p></body>",
+  "tr": "<body><p>leva 999 dias</p></body>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "page"
+ },
+ {
+  "name": "added paragraph in data-i18n-skip",
+  "en": "<main><p>a</p></main>",
+  "tr": "<main><p>a</p><div data-i18n-skip><p>As senhas devem ter 6 caracteres.</p></div></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "skip"
+ },
+ {
+  "name": "added sentence in unclosed skip span",
+  "en": "<main><p>takes 254 days</p></main>",
+  "tr": "<main><p>leva 254 dias <span data-i18n-skip>e 999 anos com bcrypt</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "skip"
+ },
+ {
+  "name": "added text after </main>",
+  "en": "<main><p>a</p></main>",
+  "tr": "<main><p>a</p></main><p>mínimo 6 caracteres</p>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "structure"
+ },
+ {
+  "name": "title/meta outside main changed",
+  "en": "<title>Crack in 254 days</title><main><p>a</p></main>",
+  "tr": "<title>Quebra em 999 dias</title><main><p>a</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "aria-label number changed",
+  "en": "<main><p aria-label=\"8 characters\">x</p></main>",
+  "tr": "<main><p aria-label=\"6 caracteres\">x</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "td dropped (cell count)",
+  "en": "<main><table><tr><td>a</td><td>b</td></tr></table></main>",
+  "tr": "<main><table><tr><td>a</td></tr></table></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "structure"
+ },
+ {
+  "name": "pre without code changed",
+  "en": "<main><pre>hashcat -m 1000</pre></main>",
+  "tr": "<main><pre>hashcat -a 1000</pre></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "kbd changed",
+  "en": "<main><p>press <kbd>Ctrl+C</kbd></p></main>",
+  "tr": "<main><p>pressione <kbd>Ctrl+V</kbd></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "img src changed",
+  "en": "<main><p><img src=\"/a.png\" alt=\"x\"></p></main>",
+  "tr": "<main><p><img src=\"/b.png\" alt=\"x\"></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "link localized prefix (legit)",
+  "en": "<main><p><a href=\"/guides/x\">x</a></p></main>",
+  "tr": "<main><p><a href=\"/pt/guides/x\">x</a></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "link to /pt home (legit?)",
+  "en": "<main><p><a href=\"/\">x</a></p></main>",
+  "tr": "<main><p><a href=\"/pt/\">x</a></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "link to /pt no slash",
+  "en": "<main><p><a href=\"/\">x</a></p></main>",
+  "tr": "<main><p><a href=\"/pt\">x</a></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "links swapped between anchors",
+  "en": "<main><p><a href=\"https://a.org\">NIST</a> <a href=\"https://b.org\">OWASP</a></p></main>",
+  "tr": "<main><p><a href=\"https://b.org\">NIST</a> <a href=\"https://a.org\">OWASP</a></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "tokens"
+ },
+ {
+  "name": "php short tag / unclosed php tail",
+  "en": "<main><p>a 1</p></main><?php include 'f.php';",
+  "tr": "<main><p>a 1</p></main><?php include 'f.php';",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "php in href prefix",
+  "en": "<main><p><a href=\"<?= BASE ?>guides/x\">x</a></p></main>",
+  "tr": "<main><p><a href=\"<?= BASE ?>pt/guides/x\">x</a></p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "pass"
+ },
+ {
+  "name": "stray </main> first",
+  "en": "</main><main><p>254</p></main>",
+  "tr": "</main><main><p>999</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "numbers"
+ },
+ {
+  "name": "heading h1 changed count",
+  "en": "<main><h1>a</h1><p>b</p></main>",
+  "tr": "<main><p>b</p></main>",
+  "lang": "pt",
+  "en_claims": [],
+  "tr_claims": [],
+  "expect": "block",
+  "check": "structure"
+ },
+ {
+  "name": "polarity must not -> devem (pt)",
+  "en": "<main><p>Verifiers must not impose composition rules[1].</p></main>",
+  "tr": "<main><p>Os verificadores devem impor regras de composição[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Verifiers must not impose composition rules"
+  ],
+  "tr_claims": [
+   "Os verificadores devem impor regras de composição"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "polarity should not -> debería (es)",
+  "en": "<main><p>Verifiers should not require changes[1].</p></main>",
+  "tr": "<main><p>Los verificadores deberían exigir cambios[1].</p></main>",
+  "lang": "es",
+  "en_claims": [
+   "Verifiers should not require changes"
+  ],
+  "tr_claims": [
+   "Los verificadores deberían exigir cambios"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "polarity cannot -> 可以 (zh)",
+  "en": "<main><p>You cannot disable it[1].</p></main>",
+  "tr": "<main><p>您可以禁用它[1]。</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "You cannot disable it"
+  ],
+  "tr_claims": [
+   "您可以禁用它"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "max-rank masks may->must",
+  "en": "<main><p>Passwords must be 15 characters and may contain spaces[1].</p></main>",
+  "tr": "<main><p>As senhas devem ter 15 caracteres e devem conter espaços[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be 15 characters and may contain spaces"
+  ],
+  "tr_claims": [
+   "As senhas devem ter 15 caracteres e devem conter espaços"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "max-rank masks swap",
+  "en": "<main><p>Passwords must be 8 characters and should be 15[1].</p></main>",
+  "tr": "<main><p>As senhas deveriam ter 8 caracteres e devem ter 15[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be 8 characters and should be 15"
+  ],
+  "tr_claims": [
+   "As senhas deveriam ter 8 caracteres e devem ter 15"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "rank0 need to -> talvez",
+  "en": "<main><p>Verifiers need to block leaked passwords[1].</p></main>",
+  "tr": "<main><p>Os verificadores talvez bloqueiem senhas vazadas[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Verifiers need to block leaked passwords"
+  ],
+  "tr_claims": [
+   "Os verificadores talvez bloqueiem senhas vazadas"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "rank0 requires -> sugere",
+  "en": "<main><p>NIST requires a blocklist[1].</p></main>",
+  "tr": "<main><p>O NIST sugere uma lista de bloqueio[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST requires a blocklist"
+  ],
+  "tr_claims": [
+   "O NIST sugere uma lista de bloqueio"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "rank0 -> unlisted strong 'tem que'",
+  "en": "<main><p>NIST recommends a blocklist[1].</p></main>",
+  "tr": "<main><p>O NIST tem que usar uma lista de bloqueio[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST recommends a blocklist"
+  ],
+  "tr_claims": [
+   "O NIST tem que usar uma lista de bloqueio"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de must not -> müssen ... nicht (need not)",
+  "en": "<main><p>Users must not change passwords[1].</p></main>",
+  "tr": "<main><p>Benutzer müssen ihre Passwörter nicht ändern[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "Users must not change passwords"
+  ],
+  "tr_claims": [
+   "Benutzer müssen ihre Passwörter nicht ändern"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de must not -> muss kein",
+  "en": "<main><p>A password must not contain a symbol[1].</p></main>",
+  "tr": "<main><p>Ein Passwort muss kein Sonderzeichen enthalten[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "A password must not contain a symbol"
+  ],
+  "tr_claims": [
+   "Ein Passwort muss kein Sonderzeichen enthalten"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de must not -> brauchen nicht",
+  "en": "<main><p>Users must not change passwords[1].</p></main>",
+  "tr": "<main><p>Benutzer brauchen Passwörter nicht zu ändern und müssen nur warten[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "Users must not change passwords"
+  ],
+  "tr_claims": [
+   "Benutzer brauchen Passwörter nicht zu ändern und müssen nur warten"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de forbidden line-wrapped 'muss\\n nicht'",
+  "en": "<main><p>It must not be changed[1].</p></main>",
+  "tr": "<main><p>Es muss\n   nicht geändert werden[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "It must not be changed"
+  ],
+  "tr_claims": [
+   "Es muss\n   nicht geändert werden"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de forbidden nbsp",
+  "en": "<main><p>It must not be changed[1].</p></main>",
+  "tr": "<main><p>Es muss nicht geändert werden[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "It must not be changed"
+  ],
+  "tr_claims": [
+   "Es muss nicht geändert werden"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de forbidden NFD müssen nicht",
+  "en": "<main><p>They must not be changed[1].</p></main>",
+  "tr": "<main><p>Sie müssen nicht geändert werden[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "They must not be changed"
+  ],
+  "tr_claims": [
+   "Sie müssen nicht geändert werden"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "de legit split 'dürfen keine' ",
+  "en": "<main><p>Verifiers must not impose composition rules[1].</p></main>",
+  "tr": "<main><p>Prüfer dürfen keine Kompositionsregeln vorschreiben[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "Verifiers must not impose composition rules"
+  ],
+  "tr_claims": [
+   "Prüfer dürfen keine Kompositionsregeln vorschreiben"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "de legit split 'darf ... nicht'",
+  "en": "<main><p>It must not be reused[1].</p></main>",
+  "tr": "<main><p>Es darf danach nicht wiederverwendet werden[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "It must not be reused"
+  ],
+  "tr_claims": [
+   "Es darf danach nicht wiederverwendet werden"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "de legit 'Soll-Zustand' noun",
+  "en": "<main><p>The target state is X[1].</p></main>",
+  "tr": "<main><p>Der Soll-Zustand ist X[1].</p></main>",
+  "lang": "de",
+  "en_claims": [
+   "The target state is X"
+  ],
+  "tr_claims": [
+   "Der Soll-Zustand ist X"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "en May month (legit)",
+  "en": "<main><p>Published in May 2024[1].</p></main>",
+  "tr": "<main><p>Publicado em maio de 2024[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Published in May 2024"
+  ],
+  "tr_claims": [
+   "Publicado em maio de 2024"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "en 'should not be required' (legit)",
+  "en": "<main><p>Changes should not be required[1].</p></main>",
+  "tr": "<main><p>As trocas não deveriam ser exigidas[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Changes should not be required"
+  ],
+  "tr_claims": [
+   "As trocas não deveriam ser exigidas"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "pt legit 'deverá' for must",
+  "en": "<main><p>Passwords must be 15 characters[1].</p></main>",
+  "tr": "<main><p>As senhas deverão ter 15 caracteres[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "Passwords must be 15 characters"
+  ],
+  "tr_claims": [
+   "As senhas deverão ter 15 caracteres"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "es legit 'tienen que' for must",
+  "en": "<main><p>Passwords must be 15 characters[1].</p></main>",
+  "tr": "<main><p>Las contraseñas tienen que tener 15 caracteres[1].</p></main>",
+  "lang": "es",
+  "en_claims": [
+   "Passwords must be 15 characters"
+  ],
+  "tr_claims": [
+   "Las contraseñas tienen que tener 15 caracteres"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "zh 应 for should",
+  "en": "<main><p>Passwords should be 15 characters[1].</p></main>",
+  "tr": "<main><p>密码应为15个字符[1]。</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "Passwords should be 15 characters"
+  ],
+  "tr_claims": [
+   "密码应为15个字符"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "zh 不能 for cannot",
+  "en": "<main><p>You cannot disable it[1].</p></main>",
+  "tr": "<main><p>您不能禁用它[1]。</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "You cannot disable it"
+  ],
+  "tr_claims": [
+   "您不能禁用它"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "zh can -> 不可以",
+  "en": "<main><p>You can disable it[1].</p></main>",
+  "tr": "<main><p>您不可以禁用它[1]。</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "You can disable it"
+  ],
+  "tr_claims": [
+   "您不可以禁用它"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "zh must -> 不必 ... 必须? (need not)",
+  "en": "<main><p>You must change it[1].</p></main>",
+  "tr": "<main><p>您不是必须更改它[1]。</p></main>",
+  "lang": "zh-Hans",
+  "en_claims": [
+   "You must change it"
+  ],
+  "tr_claims": [
+   "您不是必须更改它"
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "quoted SHALL NOT (real claim 17) -> pt 'devem exigir'",
+  "en": "<main><p>They \"SHALL NOT require subscribers to change passwords periodically\"[1].</p></main>",
+  "tr": "<main><p>Eles \"DEVEM exigir que os assinantes troquem as senhas periodicamente\"[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "They \"SHALL NOT require subscribers to change passwords periodically\""
+  ],
+  "tr_claims": [
+   "Eles \"DEVEM exigir que os assinantes troquem as senhas periodicamente\""
+  ],
+  "expect": "block",
+  "check": "normative"
+ },
+ {
+  "name": "month changed",
+  "en": "<main><p>On 17 September 2026 it returned these counts[1].</p></main>",
+  "tr": "<main><p>Em 17 de outubro de 2026 retornou estas contagens[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "On 17 September 2026 it returned these counts"
+  ],
+  "tr_claims": [
+   "Em 17 de outubro de 2026 retornou estas contagens"
+  ],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "US date format month/day changed",
+  "en": "<main><p>On September 17, 2026 it returned[1].</p></main>",
+  "tr": "<main><p>Em 26 de setembro de 2017 retornou[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "On September 17, 2026 it returned"
+  ],
+  "tr_claims": [
+   "Em 26 de setembro de 2017 retornou"
+  ],
+  "expect": "block",
+  "check": "dates"
+ },
+ {
+  "name": "empty translated sentence, claim dropped",
+  "en": "<main><p>NIST points out attackers guess[1].</p></main>",
+  "tr": "<main><p>Outra coisa[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST points out attackers guess"
+  ],
+  "tr_claims": [
+   ""
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "1-char translated sentence",
+  "en": "<main><p>NIST points out attackers guess[1].</p></main>",
+  "tr": "<main><p>Outra coisa[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "NIST points out attackers guess"
+  ],
+  "tr_claims": [
+   "a"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "markers swapped between claims",
+  "en": "<main><p>A is true[1].</p><p>B is true[2].</p></main>",
+  "tr": "<main><p>A é verdade[2].</p><p>B é verdade[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "A is true",
+   "B is true"
+  ],
+  "tr_claims": [
+   "A é verdade",
+   "B é verdade"
+  ],
+  "expect": "block",
+  "check": "claims"
+ },
+ {
+  "name": "sentence NFD page vs NFC sidecar (legit)",
+  "en": "<main><p>No is said[1].</p></main>",
+  "tr": "<main><p>Não é dito[1].</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "No is said"
+  ],
+  "tr_claims": [
+   "Não é dito"
+  ],
+  "expect": "pass"
+ },
+ {
+  "name": "sentence split by marker in middle (legit)",
+  "en": "<main><p>X takes 254 days[1], and Y.</p></main>",
+  "tr": "<main><p>X leva 254 dias[1], e Y.</p></main>",
+  "lang": "pt",
+  "en_claims": [
+   "X takes 254 days, and Y"
+  ],
+  "tr_claims": [
+   "X leva 254 dias, e Y"
+  ],
+  "expect": "pass"
+ }
+]
