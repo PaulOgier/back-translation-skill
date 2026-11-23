@@ -36,6 +36,19 @@ def md_main(md: str) -> str:
     return out[out.index("<main>") + 6:out.index("</main>")].strip()
 
 
+def assert_linear(test, make, n: int, label: str) -> None:
+    """Time markdown_to_html on inputs of size n and 2n. Linear code roughly doubles and the
+    quadratic loops these tests guard against roughly quadruple, so a ratio under 3 passes
+    on a slow CI runner and a fast laptop alike, where a wall-clock limit does not."""
+    times = []
+    for size in (n, 2 * n):
+        text = make(size)
+        start = time.perf_counter()
+        markdown_to_html(text)
+        times.append(time.perf_counter() - start)
+    test.assertLess(times[1], 3 * times[0] + 0.05, f"{label}: {times[0]:.3f}s at n, {times[1]:.3f}s at 2n")
+
+
 class Equivalence(unittest.TestCase):
     """Each construct parses into the blocks a hand-written page has."""
 
@@ -126,11 +139,8 @@ class Equivalence(unittest.TestCase):
         for unit in ("*", "[", "`", "<", "_", "*a", "[a](", "](x (", '<a x="', "<!--", "&#", "a  ", "![", "\\",
                      "<a b ", "**a*", "[]", "> ", "- ", "1. ", "[a](\\(", "[](", "*a_", "_a*", "https://", "a)",
                      "<script>", "- [x] "):
-            line = unit * (1_000_000 // len(unit))
-            start = time.perf_counter()
-            page = markdown_to_html(line)
-            self.assertLess(time.perf_counter() - start, 2.0, repr(unit))
-            self.assertEqual(vt.parse_page(page).mains, 1)
+            assert_linear(self, lambda n, u=unit: u * (n // len(u)), 250_000, repr(unit))
+            self.assertEqual(vt.parse_page(markdown_to_html(unit * 1000)).mains, 1)
 
 
 class ReviewRound4(unittest.TestCase):
@@ -193,13 +203,11 @@ class ReviewRound4(unittest.TestCase):
                                            '<li><input type="checkbox" disabled>Open</li></ul>')
 
     def test_quadratic_scans_are_fast(self):
-        for name, text in (("R1 blank lines after a list item", "- a\n" + "\n" * 80_000),
-                           ("R2 nested brackets", "[" * 1_280_000 + "]" * 1_280_000),
-                           ("R3 link definitions", "".join(f"[l{i}]: /u{i}\n" for i in range(200_000)))):
+        for name, make, n in (("R1 blank lines after a list item", lambda n: "- a\n" + "\n" * n, 40_000),
+                              ("R2 nested brackets", lambda n: "[" * n + "]" * n, 320_000),
+                              ("R3 link definitions", lambda n: "".join(f"[l{i}]: /u{i}\n" for i in range(n)), 50_000)):
             with self.subTest(name):
-                start = time.perf_counter()
-                markdown_to_html(text)
-                self.assertLess(time.perf_counter() - start, 2.0, name)
+                assert_linear(self, make, n, name)
 
     same = Equivalence.same
 

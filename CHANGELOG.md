@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Speed tests compare run time at size n and 2n instead of a fixed time limit, so they
+  pass on slower CI runners and still catch a quadratic loop.
+- CI runs the Python 3.9 and 3.13 jobs to completion even when one fails.
+
 ## 0.1.0 (2026-11-23)
 
 - First public release: translator prompt, glossary template with confidence levels,
