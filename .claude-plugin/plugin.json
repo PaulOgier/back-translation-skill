@@ -1,7 +1,7 @@
 {
   "name": "back-translation",
   "description": "Translate a finished English article into another language without adding or changing a fact: different-model translation, blind back-translation of every block, and a stdlib Python checker for numbers, dates, citations, code, links, tables and must/may wording.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": { "name": "Paul Ogier", "url": "https://github.com/PaulOgier" },
   "repository": "https://github.com/PaulOgier/back-translation-skill",
   "license": "MIT",

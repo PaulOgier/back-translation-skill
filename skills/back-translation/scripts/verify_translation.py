@@ -267,10 +267,10 @@ class PageText(HTMLParser):
                 for t in texts:
                     self._skipped(" " + t + " ")
             return
-        if self.in_main and tag == "a" and "href" in a:
-            self.hrefs.append(a["href"])
+        if self.in_main and tag == "a" and "href" in a:  # markdown_page.py's "unsafe:" guard, so .md and .html compare
+            self.hrefs.append(a["href"].removeprefix("unsafe:"))
         if self.in_main and tag in MEDIA_TAGS:
-            self.srcs += [f"{k}={a[k]}" for k in MEDIA_ATTRS if k in a]
+            self.srcs += [f"{k}={a[k].removeprefix('unsafe:')}" for k in MEDIA_ATTRS if k in a]
         if tag == "ol" and _list_number(a.get("start", "1")) != "1":
             self.list_marks.append(f"ol start={_list_number(a['start'])}")
         if tag == "li" and "value" in a:

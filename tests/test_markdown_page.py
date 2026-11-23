@@ -104,6 +104,74 @@ class Equivalence(unittest.TestCase):
         self.assertIn('href="/a(b)"', md_main("[x](/a(b))"))
         self.assertIn('<a href="/u">a <img src="/i" alt="b"></a>', md_main("[a ![b](/i)](/u)"))
 
+    def test_unsafe_link_schemes_are_prefixed(self):
+        cases = {
+            "[x](javascript:alert(1))": 'href="unsafe:javascript:alert(1)"',
+            "[x](JaVaScRiPt:alert(1))": 'href="unsafe:JaVaScRiPt:alert(1)"',
+            "[x](&#106;avascript:alert(1))": 'href="unsafe:&#106;avascript:alert(1)"',
+            "[x](javascript&colon;alert(1))": 'href="unsafe:javascript&colon;alert(1)"',
+            "[x](<java\tscript:alert(1)>)": 'href="unsafe:java\tscript:alert(1)"',
+            "[x](<\x01javascript:alert(1)>)": 'href="unsafe:\x01javascript:alert(1)"',
+            "<javascript:alert(1)>": 'href="unsafe:javascript:alert(1)"',
+            "![i](data:image/svg+xml,x)": 'src="unsafe:data:image/svg+xml,x"',
+            "[x][r]\n\n[r]: vbscript:msgbox": 'href="unsafe:vbscript:msgbox"',
+        }
+        for md, want in cases.items():
+            with self.subTest(md=md):
+                self.assertIn(want, md_main(md))
+        for md, want in {"[x](HTTPS://a.example/)": 'href="HTTPS://a.example/"',
+                         "[x](mailto:a@b.example)": 'href="mailto:a@b.example"',
+                         "[x](/p:q)": 'href="/p:q"', "[x](#a:b)": 'href="#a:b"',
+                         "[x](p?q=a:b)": 'href="p?q=a:b"'}.items():
+            with self.subTest(md=md):
+                self.assertIn(want, md_main(md))
+        long_ref = "&#" + "9" * 5000 + ";"
+        self.assertIn(f'href="{long_ref.replace("&", "&amp;")}"', md_main(f"[x]({long_ref})"))
+
+    def test_raw_html_loses_handlers_and_unsafe_urls(self):
+        cases = {
+            '<img src=x onerror=alert(1)>': '<img src=x >',
+            'Hi <a href="javascript:x" onclick=\'y\'>a</a> <a href="/ok">b</a>':
+                'Hi <a href="unsafe:javascript:x" >a</a> <a href="/ok">b</a>',
+            '<div>\n<svg/onload=alert(1)>\n</div>': '<svg/>',
+            '<div>\n<img/src=x/onerror=alert(1)>\n</div>': '<img/src=x/onerror=alert(1)>',  # one unquoted src value
+            '<div>\n<img src="x"onerror=alert(1)>\n</div>': '<img src="x">',
+            '<div>\n<a href=&#106avascript:x>q</a>\n</div>': '<a href=unsafe:&#106avascript:x>',
+            '<div>\n<a href="&#0000000106;avascript:x">q</a>\n</div>': 'href="unsafe:&#0000000106;avascript:x"',
+            '<iframe srcdoc="<script>x</script>" src="https://e.example"></iframe>':
+                '<iframe  src="https://e.example">',
+            '<Callout onClick={x} href="vbscript:x">': '<Callout  href="unsafe:vbscript:x">',
+            '<div>\n<form action="javascript:x"><button formaction=\'data:x\'>b</button></form>\n</div>':
+                '<form action="unsafe:javascript:x"><button formaction=\'unsafe:data:x\'>',
+        }
+        for md, want in cases.items():
+            with self.subTest(md=md):
+                self.assertIn(want, md_main(md))
+        p = '<img src=x onerror=alert(1)>'
+        for md in (f'<div><!-- <a title="--> {p}</div>', f'<textarea><a title="</textarea>{p}',
+                   f'<div><script>\'<a x="\'</script>{p}<i y=""></div>',
+                   f'text <textarea><a title="</textarea>{p[:-1]} "> end',
+                   f'<script>/*{"İ" * 40}*/</script>{p}', f'<script></script >{p}</script>',
+                   f'<style></style/>{p}<i></style>', '<style onload=alert(1)></style>',
+                   '<script src=x onerror=alert(1)></script>'):
+            with self.subTest(md=md):
+                self.assertNotIn("onerror=alert(1)", md_main(md))
+                self.assertNotIn("onload=alert(1)", md_main(md))
+        deep = "<a/x=" * 50000
+        start = time.perf_counter()
+        self.assertTrue(md_main(deep))
+        self.assertLess(time.perf_counter() - start, 5)
+
+    def test_unsafe_prefix_compares_with_html(self):
+        p = vt.parse_page(markdown_to_html("[t](tel:+2711) ![i](data:x)"))
+        q = vt.parse_page('<html lang="en"><body><main><p><a href="tel:+2711">t</a> <img src="data:x" alt="i"></p></main></body></html>')
+        self.assertEqual((p.hrefs, p.srcs), (q.hrefs, q.srcs))
+
+    def test_page_has_script_blocking_csp(self):
+        page = markdown_to_html("<script>x()</script>")
+        self.assertLess(page.index("Content-Security-Policy\" content=\"script-src 'none'"), page.index("</head>"))
+        self.assertEqual(vt.parse_page(page).redirects, [])
+
     def test_citation_markers_stay_markers(self):
         p = vt.parse_page(markdown_to_html("Must be 15 characters[1][2]."))
         self.assertEqual(tl.MARKER_RE.findall(p.region_text("main")), ["1", "2"])

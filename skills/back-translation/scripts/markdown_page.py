@@ -5,7 +5,11 @@ the HTML page verify_translation.py parses. Standard library only and Python 3.9
 compatible, like the checker.
 
 The output is one page: <html lang> and, in <head>, <title> and
-<meta name="description"> from front matter; everything else inside one <main>.
+<meta name="description"> from front matter and a Content-Security-Policy that
+stops any script in the page from running; everything else inside one <main>.
+The body then goes through html_safety.defang: on* handlers and srcdoc are
+removed and a link, image or other URL attribute whose scheme is not http, https
+or mailto gets an "unsafe:" prefix (verify_translation.py drops it again).
 Equivalent Markdown and hand-written HTML parse into the same block structure, so
 every check reads a Markdown pair as it reads an HTML pair.
 
@@ -60,6 +64,8 @@ import unicodedata
 from bisect import bisect_right
 from html.entities import html5
 
+from html_safety import defang
+
 ASCII_PUNCT = set("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
 BLOCK_HTML = set(
     "address article aside base basefont blockquote body caption center col colgroup dd details dialog dir div dl dt "
@@ -95,6 +101,7 @@ _NON_PROSE_KEYS = {"slug", "aliases", "weight", "url", "permalink", "layout", "d
 _TASK = re.compile(r"\[([ xX])\](?:[ \t]+|$)")
 _BARE_URL = re.compile(r"(?<![\w/])https?://[^\x00-\x20\x7f-\U0010ffff<>\[\]\"']+")  # ASCII only: «», 。 and quotes end it
 _RAW_INLINE = re.compile(r"<(script|style|template)(?=[\s/>])", re.I)
+_CSP = "script-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"  # raw HTML passes through, so nothing in it may run
 
 
 def markdown_to_html(text: str, lang: str | None = None, default_lang: str | None = None) -> str:
@@ -112,8 +119,8 @@ def markdown_to_html(text: str, lang: str | None = None, default_lang: str | Non
     refs: dict[str, tuple[str, str | None]] = {}
     out: list = []
     _blocks(body.split("\n"), out, refs, False, 0)
-    main = "\n".join(x if isinstance(x, str) else x.render(refs) for x in out)
-    head = ['<meta charset="utf-8">']
+    main = defang("\n".join(x if isinstance(x, str) else x.render(refs) for x in out))
+    head = ['<meta charset="utf-8">', f'<meta http-equiv="Content-Security-Policy" content="{_CSP}">']
     if "title" in meta:
         head.append(f"<title>{html.escape(meta['title'], quote=False)}</title>")
     if "description" in meta:
