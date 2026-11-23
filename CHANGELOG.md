@@ -1,8 +1,13 @@
 # Changelog
 
+## 0.1.2 (2026-11-23)
+
+- Icon re-encoded as a smaller palette PNG.
+- Design source files moved out of the repository; the plugin folder now holds only file types the Claude plugin directory accepts.
+
 ## 0.1.1 (2026-11-23)
 
-- Plugin icon (`.claude-plugin/icon.png`, source `docs/icon.src.svg`) for directory listings.
+- Plugin icon for directory listings.
 - skills.sh install-count badge in the README.
 - Speed tests compare run time at size n and 2n instead of a fixed time limit, so they
   pass on slower CI runners and still catch a quadratic loop.
